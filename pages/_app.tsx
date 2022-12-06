@@ -10,9 +10,13 @@ import Footer from '../components/Footer';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <div className="wrapper">
+        <Header />
+        <Component {...pageProps} />
+        <div className="welcome">shop</div>
+      </div>
+
+      {/* <Footer /> */}
     </Provider>
   );
 }
