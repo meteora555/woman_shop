@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Home from './home';
 
 const HomePage = (): JSX.Element => {
   return (
@@ -6,6 +7,7 @@ const HomePage = (): JSX.Element => {
       <Head>
         <title>Woman Shop</title>
       </Head>
+      <Home />
     </>
   );
 };

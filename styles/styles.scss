@@ -1,8 +1,16 @@
 @import './_reset.scss';
 
+/* Стили для страниц */
+@import './pages/catalog.scss';
+
 /* Стили для хедера */
 .wrapper {
   position: relative;
+  background-color: #f5f5f5;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.container {
   background-color: #f5f5f5;
   max-width: 1440px;
   margin: 0 auto;
@@ -63,6 +71,19 @@
       height: 54px;
       width: 54px;
     }
+  }
+}
+.header__dark {
+  padding: 2.3rem 0;
+  width: 100%;
+}
+.title-dark,
+.desc-dark {
+  color: black;
+}
+.inner-dark {
+  a {
+    color: black;
   }
 }
 
@@ -192,15 +213,16 @@
 .footer {
   margin-top: 60px;
   padding: 15px;
-  background-color: #d9d9d9;
   &__info {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
   &__about {
+    padding: 10px;
     width: 650px;
     padding-top: 15px;
+    border: 2px solid #d9d9d9;
     &-title {
       padding-bottom: 20px;
     }

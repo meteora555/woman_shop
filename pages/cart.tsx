@@ -1,3 +1,9 @@
+import { MainContent } from '../components';
+
 export default function Cart() {
-  return <div>Cart page</div>;
+  return (
+    <div>
+      <MainContent />
+    </div>
+  );
 }
