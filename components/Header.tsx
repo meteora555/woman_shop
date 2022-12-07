@@ -8,14 +8,16 @@ const Header = (): JSX.Element => {
 
   return (
     <div className="header">
-      <nav>
+      <nav className="nav">
         <button className="header__burger-btn">
           <Image src="/content/icons/burger.svg" height={52} width={52} alt="burger-icon" />
         </button>
-        <div className="logo">
+        <div className="header__logo">
           <Image src="/content/icons/logo.svg" height={67} width={67} alt="logo-icon" />
-          <h4 className="logo-title">ANTONETTI</h4>
-          <p className="logo-desc">сеть магазинов женской одежды</p>
+          <span>
+            <h4 className="header__logo-title">ANTONETTI</h4>
+            <p className="header__logo-desc">сеть магазинов женской одежды</p>
+          </span>
         </div>
         <div className="header__inner">
           <Link href={'/catalog'}>Женщинам</Link>
@@ -25,13 +27,13 @@ const Header = (): JSX.Element => {
         </div>
         <div className="header__buttons">
           <button className="header__buttons-auth">
-            <Image src="/content/icons/auth.svg" height={17} width={17} alt="auth-icon" />
+            <Image src="/content/icons/auth.svg" height={25} width={25} alt="auth-icon" />
           </button>
           <button className="header__buttons-search">
-            <Image src="/content/icons/search.svg" height={17} width={17} alt="search-icon" />
+            <Image src="/content/icons/search.svg" height={25} width={25} alt="search-icon" />
           </button>
           <button className="header__buttons-favorite">
-            <Image src="/content/icons/favorite.svg" height={17} width={17} alt="favorite-icon" />
+            <Image src="/content/icons/favorite.png" height={25} width={25} alt="favorite-icon" />
           </button>
         </div>
       </nav>

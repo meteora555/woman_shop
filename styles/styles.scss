@@ -1,0 +1,234 @@
+@import './_reset.scss';
+
+/* Стили для хедера */
+.wrapper {
+  position: relative;
+  background-color: #f5f5f5;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.header {
+  padding: 2.3rem 0;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &__burger-btn {
+    margin-left: 50px;
+    background: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 50px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    &-title {
+      font-size: 22px;
+      color: #fff;
+      padding-left: 8px;
+    }
+    &-desc {
+      font-size: 16px;
+      color: #fff;
+      padding-left: 8px;
+    }
+  }
+
+  &__inner {
+    margin-left: 145px;
+    display: flex;
+    column-gap: 49px;
+    a {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    padding-right: 75px;
+    column-gap: 4px;
+    &-auth,
+    &-search,
+    &-favorite {
+      background: none;
+      border: 1px solid #d9d9d9;
+      border-radius: 50px;
+      height: 54px;
+      width: 54px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.welcome {
+  position: absolute;
+  top: 0;
+}
+/* Стили для слайдера */
+.swiper-pagination {
+  bottom: 60px;
+  width: 200px;
+  span {
+    width: 14px;
+    height: 14px;
+    border-radius: 25px;
+    margin-right: 5px;
+    background-color: #fff;
+  }
+}
+.swiper-pagination-bullet {
+  width: 25px;
+  height: 5px;
+  border-radius: 5px;
+}
+/* Стили для заглавного текста */
+.main__desc {
+  position: absolute;
+  top: 7%;
+  left: 3%;
+  z-index: 4;
+  width: 100%;
+  text-align: center;
+  &-title {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 75px;
+    pointer-events: none;
+    position: relative;
+  }
+  &-text {
+    position: absolute;
+    top: 90;
+    left: 29%;
+    color: #fff;
+    font-weight: 200;
+    font-size: 60px;
+    line-height: 75px;
+    width: 600px;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+  &-btn {
+    position: absolute;
+    top: 255px;
+    left: 635px;
+    width: 200px;
+    height: 75px;
+    border: 1px solid #fff;
+    background: none;
+    a {
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+  &-ring {
+    position: absolute;
+    background: none;
+    right: 11%;
+    top: 300px;
+  }
+}
+/* Стили для предупреждения, который находится после слайдера */
+.warning {
+  padding-top: 112px;
+  &-text {
+    font-size: 12px;
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #d9d9d9;
+  }
+}
+.order {
+  margin-top: 30px;
+  &-title {
+    padding-top: 35px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 7px;
+    grid-row-gap: 0px;
+  }
+}
+.category__list {
+  display: flex;
+  &-big {
+    img {
+      width: 1300px;
+      min-height: 930px;
+    }
+  }
+  &-litle {
+    padding-left: 4px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 8px;
+    img {
+      width: 500px;
+      height: 460px;
+    }
+  }
+}
+/* Стили для футера */
+
+.footer {
+  margin-top: 60px;
+  padding: 15px;
+  background-color: #d9d9d9;
+  &__info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  &__about {
+    width: 650px;
+    padding-top: 15px;
+    &-title {
+      padding-bottom: 20px;
+    }
+  }
+  &__about-text {
+    font-size: 12px;
+    font-weight: 400;
+    padding-bottom: 15px;
+  }
+  &__item {
+    padding-bottom: 10px;
+    a {
+      color: black;
+    }
+  }
+  &__social-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    column-gap: 15px;
+    justify-content: space-between;
+  }
+  &__social-link {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    align-items: center;
+  }
+}
