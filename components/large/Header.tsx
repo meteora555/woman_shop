@@ -19,6 +19,7 @@ const Header = (): JSX.Element => {
   return (
     <div className="header">
       {visibleAside && <ModalAside />}
+
       <nav className="nav">
         <button className="header__burger-btn" onClick={toogleVisibleAside}>
           <Image src="/content/icons/burger.svg" height={52} width={52} alt="burger-icon" />

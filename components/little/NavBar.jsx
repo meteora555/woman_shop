@@ -1,66 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import ModalCartItem from '../little/ModalCartItem';
+import ModalCart from '../large/ModalCart';
 
 export default function NavBar() {
-  const [visibleCart, setVisebleCart] = useState(true);
-  const cartRef = useRef();
-  const toogleVisibleCart = () => {
-    setVisebleCart(!visibleCart);
-    console.log(cartRef);
-  };
-
-  // React.useEffect(() => {
-  //   console.log('cart mount');
-  //   const OutsideClickCart = (event) => {
-  //     if (!event.path.includes(cartRef.current)) {
-  //       setVisebleCart(false);
-  //       console.log('click outside');
-  //       console.log(cartRef.current);
-  //       console.log(event.path);
-  //     }
-  //   };
-
-  //   document.body.addEventListener('click', OutsideClickCart);
-
-  //   return () => document.body.removeEventListener('click', OutsideClickCart);
-  // }, []);
-
+  const [open, setOpen] = useState(true);
   return (
     <div className="bar">
-      {visibleCart && (
-        <div ref={cartRef} className="modalCart">
-          <div className="modalCart__wraper">
-            <div className="modalCart__btn">
-              <button onClick={setVisebleCart(false)}>закрыть</button>
-              <h2>Корзина</h2>
-            </div>
-            <div className="modalCart__items">
-              <ModalCartItem />
-              <ModalCartItem />
-              <ModalCartItem />
-              <ModalCartItem />
-              <ModalCartItem />
-              <ModalCartItem />
-              <ModalCartItem />
-            </div>
-            <div className="total">
-              <button>ПРОДОЛЖИТЬ ПОКУПКИ</button>
-              <button>ОФОРМИТЬ ЗАКАЗ</button>
-
-              <div className="total__items">
-                <p>Всего товаров</p>
-                <p>25 штук</p>
-              </div>
-              <div className="total__price">
-                <p>Стоимость</p>
-                <p>25000 ₽</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
+      <ModalCart open={open} />
       <div className="bar__filter">
         <ul className="bar__filter-list">
           <li className="bar__filter-item">
@@ -98,16 +44,9 @@ export default function NavBar() {
       </div>
       <div className="sort__popup"></div>
       <div className="bar__cart">
-        <span>
-          <button
-            className="cart__btn"
-            onClick={() => {
-              setVisebleCart(true);
-              console.log(visibleCart);
-            }}>
-            <Image src="/content/icons/cart-btn.png" height={37} width={37} alt="filter-icon" />
-          </button>
-        </span>
+        <button onClick={() => setOpen(true)} className="cart__btn">
+          <Image src="/content/icons/cart-btn.png" height={37} width={37} alt="filter-icon" />
+        </button>
         <b>0</b>
       </div>
     </div>
