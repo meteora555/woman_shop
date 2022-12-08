@@ -1,6 +1,7 @@
 .modalCart {
   position: absolute;
-  top: 0;
+  z-index: 3;
+  top: -75%;
   right: 0;
   width: 40%;
   background-color: #fff;
@@ -54,6 +55,9 @@
     }
   }
 }
+.modalCartHide {
+  display: none;
+}
 .total {
   padding: 10px;
   display: grid;
@@ -83,6 +87,7 @@
   }
 }
 .modalAside {
+  z-index: 2;
   position: absolute;
   top: 125px;
   width: 40%;

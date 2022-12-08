@@ -3,7 +3,7 @@ import ModalCartItem from '../little/ModalCartItem';
 export default function ModalCart() {
   return (
     <div className="modalCart">
-      <div className="modalCart__wrapper">
+      <div className="modalCart__wraper">
         <div className="modalCart__btn">
           <button>закрыть</button>
           <h2>Корзина</h2>

@@ -6,8 +6,8 @@
   padding: 100px 15px 50px 15px;
   position: relative;
 
-  opacity: 0;
-  animation: ani 3.5s forwards;
+  // opacity: 0;
+  // animation: ani 3.5s forwards;
 
   @keyframes ani {
     0% {
@@ -51,6 +51,10 @@
       color: red;
     }
   }
+}
+.cart__btn {
+  width: 52px;
+  height: 52px;
 }
 .catalog {
   &__items {

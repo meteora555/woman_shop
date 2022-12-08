@@ -1,0 +1,184 @@
+{
+    "clothes": [
+      {
+        "id": 0,
+        "imageUrl": "https://i.ibb.co/6mjZ6bK/rammstein-11.png",
+        "name": "Rammstein-rammstein",
+        "types": [0, 1, 2],
+        "price": 4599,
+        "category": 4
+        
+      },
+      {
+        "id": 1,
+        "imageUrl": "https://i.ibb.co/7zxpxvb/Court-In-The-Act-8.png",
+        "name": "Satan-Court in the Act",
+        "types": [0, 1, 2],
+        "price": 3499,
+        "category": 4
+      
+      },
+      {
+        "id": 2,
+        "imageUrl": "https://i.ibb.co/pjhXw31/avantasia-4.png",
+        "name": "AvantasiA",
+        "types": [0, 1],
+        "price": 3499,
+        "category": 4
+        
+      },
+      {
+        "id": 3,
+        "imageUrl": "https://i.ibb.co/MpfVrX7/bleed-from-within-5.png",
+        "name": "Shrine-bleed from within",
+        "types": [0, 1],
+        "price": 3299,
+        "category": 4
+      
+      },
+      {
+        "id": 4,
+        "imageUrl": "https://i.ibb.co/LnSV9sW/bring-Me-The-Horizon-10.png",
+        "name": "Bring me the horizon",
+        "types": [0, 1],
+        "price": 3499,
+        "category": 5
+        
+      },
+      {
+        "id": 5,
+        "imageUrl": "https://i.ibb.co/KmQ2mjk/dead-cross-3.png",
+        "name": "Dead cross",
+        "types": [0, 1],
+        "price": 2499,
+        "category": 4
+        
+      },
+      {
+        "id": 6,
+        "imageUrl": "https://i.ibb.co/dmX76Vr/Dedication-9.png",
+        "name": "Snite-dedication",
+        "types": [0, 1],
+        "price": 5999,
+        "category": 4
+        
+      },
+      {
+        "id": 7,
+        "imageUrl": "https://i.ibb.co/g4TpM2X/eminem-encore.png",
+        "name": "Eminem-encore",
+        "types": [0, 1, 2],
+        "price": 8599,
+        "category": 0
+        
+      },
+      {
+        "id": 8,
+        "imageUrl": "https://i.ibb.co/9tc08Fy/eminem-hits.png",
+        "name": "Eminem-The Hits",
+        "types": [0, 1],
+        "price": 8399,
+        "category": 0
+        
+      },
+      {
+        "id": 9,
+        "imageUrl": "https://i.ibb.co/wg4D70X/eminem.png",
+        "name": "Eminem-Curtain call",
+        "types": [0, 1, 2],
+        "price": 8399,
+        "category": 0
+        
+      },
+      {
+        "id": 10,
+        "imageUrl": "https://i.ibb.co/rxr6FDZ/kindom-and-crown-2.png",
+        "name": "Machine Head-kindom and crown",
+        "types": [0, 1],
+        "price": 3399,
+        "category": 4
+      
+      },
+      {
+        "id": 11,
+        "imageUrl": "https://i.ibb.co/JjfcGRT/slipknot-limit.png",
+        "name": "Slipknot-slipknot limit",
+        "types": [0, 1, 2],
+        "price": 8399,
+        "category": 5
+        
+      },
+      {
+        "id": 12,
+        "imageUrl": "https://i.ibb.co/41PzPV3/korn.png",
+        "name": "Korn-Nothing",
+        "types": [0, 1, 2],
+        "price": 6399,
+        "category": 5
+        
+      },
+      {
+        "id": 13,
+        "imageUrl": "https://i.ibb.co/PwFW21n/marilyn.png",
+        "name": "Marilyn Manson-We are chaos",
+        "types": [0, 1, 2],
+        "price": 4199,
+        "category": 5
+        
+      },
+      {
+        "id": 14,
+        "imageUrl": "https://i.ibb.co/M8TdBDK/rammstein-zeit.jpg",
+        "name": "Rammstein-Zeit",
+        "types": [0, 1, 2],
+        "price": 6999,
+        "category": 4
+        
+      },
+      {
+        "id": 15,
+        "imageUrl": "https://i.ibb.co/kXt7n0h/true-power-1.png",
+        "name": "True power",
+        "types": [0, 1],
+        "price": 6999,
+        "category": 8
+        
+      },
+      {
+        "id": 16,
+        "imageUrl": "https://i.ibb.co/XLx0CGc/emma.png",
+        "name": "Emma",
+        "types": [0, 1],
+        "price": 2999,
+        "category": 7
+        
+      },
+      {
+        "id": 17,
+        "imageUrl": "https://i.ibb.co/2dPJMV5/bob.png",
+        "name": "Bob Marly",
+        "types": [0, 1],
+        "price": 2999,
+        "category": 1
+    
+      },
+      {
+        "id": 18,
+        "imageUrl": "https://i.ibb.co/WWdCLr7/amanda.png",
+        "name": "Amanda",
+        "types": [0, 1],
+        "price": 3999,
+        "category": 3
+        
+      },
+      {
+        "id": 19,
+        "imageUrl": "https://i.ibb.co/dpf06wR/linkin.png",
+        "name": "Linkin park-Hybrid theory",
+        "types": [0, 1, 2],
+        "price": 9999,
+        "category": 5
+        
+      }
+    ]
+  }

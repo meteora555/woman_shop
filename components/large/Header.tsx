@@ -1,17 +1,26 @@
-import Router, { useRouter } from 'next/router';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
-import { url } from 'inspector';
+
 import Image from 'next/image';
 import ModalAside from './ModalAside';
 
 const Header = (): JSX.Element => {
-  const router = useRouter();
+  const [visibleAside, setVisebleAside] = useState(false);
+  const asideRef = useRef();
+  const toogleVisibleAside = () => {
+    setVisebleAside(!visibleAside);
+  };
+  const OutsideClickAside = (e: any) => {
+    if (!e.path.includes(asideRef.current)) {
+      setVisebleAside(false);
+    }
+  };
 
   return (
     <div className="header">
-      {/* <ModalAside /> */}
+      {visibleAside && <ModalAside />}
       <nav className="nav">
-        <button className="header__burger-btn">
+        <button className="header__burger-btn" onClick={toogleVisibleAside}>
           <Image src="/content/icons/burger.svg" height={52} width={52} alt="burger-icon" />
         </button>
         <div className="header__logo">
