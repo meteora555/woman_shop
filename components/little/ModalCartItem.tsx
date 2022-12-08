@@ -4,8 +4,8 @@ export default function ModalCartItem() {
   return (
     <div className="modalCart__item">
       <Image src="/content/catalog/bruki-1.png" height={200} width={150} alt="modalCart-img" />
-      <h5>Брюки зауженные светлого цвета</h5>
-      <b>6090₽</b>
+      <p>Брюки зауженные светлого цвета</p>
+      <p>6090₽</p>
       <span>x</span>
       <i>1</i>
       <b>10000₽</b>

@@ -18,10 +18,9 @@ export default function ModalCart() {
           <ModalCartItem />
         </div>
         <div className="total">
-          <div className="modalCart__btn">
-            <button>ОФОРМИТЬ ЗАКАЗ</button>
-            <button>ПРОДОЛЖИТЬ ПОКУПКИ</button>
-          </div>
+          <button>ПРОДОЛЖИТЬ ПОКУПКИ</button>
+          <button>ОФОРМИТЬ ЗАКАЗ</button>
+
           <div className="total__items">
             <p>Всего товаров</p>
             <p>25 штук</p>

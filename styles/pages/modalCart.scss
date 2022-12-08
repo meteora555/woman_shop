@@ -14,6 +14,7 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 25px;
+    margin-right: 10px;
     margin-top: 30px;
     position: relative;
     &::after {
@@ -24,18 +25,19 @@
       width: 100%;
       bottom: -23px;
     }
-    h2 {
-      text-transform: uppercase;
-      font-size: 18px;
-      font-weight: 400;
-    }
     button {
       color: #fff;
       background-color: black;
       width: 150px;
       height: 40px;
     }
+    h2 {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 400;
+    }
   }
+
   &__items {
     margin-top: 100px;
     padding: 10px 15px 10px 15px;
@@ -43,12 +45,40 @@
   &__item {
     padding-bottom: 10px;
     display: grid;
-    grid-template-columns: 3fr 2fr 1fr 0.2fr repeat(3, 1fr);
+    grid-template-columns: 2fr 3fr 1fr 0.2fr repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 5px;
     align-items: center;
     button {
       background: none;
+    }
+  }
+}
+.total {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 5px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #d9d9d9;
+    top: -8px;
+  }
+  button {
+    color: #fff;
+    background-color: black;
+    width: 150px;
+    height: 40px;
+  }
+  &__items,
+  &__price {
+    text-align: center;
+    p {
+      font-size: 14px;
     }
   }
 }
