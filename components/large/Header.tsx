@@ -2,12 +2,14 @@ import Router, { useRouter } from 'next/router';
 import Link from 'next/link';
 import { url } from 'inspector';
 import Image from 'next/image';
+import ModalAside from './ModalAside';
 
 const Header = (): JSX.Element => {
   const router = useRouter();
 
   return (
     <div className="header">
+      {/* <ModalAside /> */}
       <nav className="nav">
         <button className="header__burger-btn">
           <Image src="/content/icons/burger.svg" height={52} width={52} alt="burger-icon" />

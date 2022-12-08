@@ -82,3 +82,29 @@
     }
   }
 }
+.modalAside {
+  position: absolute;
+  top: 125px;
+  width: 40%;
+  background-color: #fff;
+  min-height: 50vh;
+  min-width: 1440px;
+  box-shadow: 15.1px 12px 8px #b5b3b3;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.categories {
+  h2 {
+    font-size: 16px;
+    padding: 20px;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  li {
+    padding: 3px;
+  }
+}
