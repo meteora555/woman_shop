@@ -8,7 +8,6 @@ export default function NavBar() {
   const [listening, setListening] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  console.log(isOpen, 'isopen');
 
   useEffect(listenForOutsideClick(listening, setListening, menuRef, setIsOpen));
   return (
