@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import Image from 'next/image';
 import ModalAside from './ModalAside';
+import { Desc } from '../little/Desc';
 
 const Header = (): JSX.Element => {
   const [visibleAside, setVisebleAside] = useState(false);
@@ -18,10 +19,11 @@ const Header = (): JSX.Element => {
 
   return (
     <div className="header">
+      <Desc />
       {visibleAside && <ModalAside />}
 
       <nav className="nav">
-        <button className="header__burger-btn" onClick={toogleVisibleAside}>
+        <button className="header__burger-btn " onClick={toogleVisibleAside}>
           <Image src="/content/icons/burger.svg" height={52} width={52} alt="burger-icon" />
         </button>
         <div className="header__logo">
@@ -31,7 +33,7 @@ const Header = (): JSX.Element => {
             <p className="header__logo-desc">сеть магазинов женской одежды</p>
           </span>
         </div>
-        <div className="header__inner">
+        <div className="header__inner ">
           <Link href={'/catalog'}>Женщинам</Link>
           <Link href={'/catalog'}>Мужчинам</Link>
           <Link href={'/about'}>Сотрудничество</Link>

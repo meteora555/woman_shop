@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -41,18 +40,6 @@ const MainContent = (): JSX.Element => {
             <Image src="/content/slider/4.png" height={700} width={1440} alt="MainSlider - 4" />
           </SwiperSlide>
         </Swiper>
-        <div className="main__desc">
-          <h2 className="main__desc-title">ANTONETTI</h2>
-          <p className="main__desc-text">российский бренд женской одежды</p>
-          <button className="main__desc-btn">
-            <Link href={'/catalog'}>ПЕРЕЙТИ В КАТАЛОГ</Link>
-          </button>
-          <button className="main__desc-ring">
-            <Link href={'/catalog'}>
-              <Image src="/content/icons/ring.png" height={80} width={80} alt="ring-icon" />
-            </Link>
-          </button>
-        </div>
       </div>
       <div className="warning">
         <p className="warning-text">

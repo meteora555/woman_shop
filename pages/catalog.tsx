@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
-import { CatalogItem, Footer, HeaderDark, ModalCart, NavBar } from '../components';
-import Products from '../pages/api/product';
+import { CatalogItem, Footer, HeaderDark, NavBar } from '../components';
+
+const BASE_URL = 'https://632346ad362b0d4e7de066f9.mockapi.io/clothes';
+export const getStaticProps = async () => {
+  const response = await fetch(BASE_URL);
+  const data = await response.json();
+  console.log(data);
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+  return {
+    props: { products: data },
+  };
+};
 
 export default function Catalog() {
-  React.useEffect(() => {
-    Products();
-    console.log(Products);
-  }, []);
   return (
     <div className="container">
       <HeaderDark />

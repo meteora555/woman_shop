@@ -6,6 +6,7 @@ import ModalCart from './large/ModalCart';
 import NavBar from './little/NavBar';
 import CatalogItem from './little/CatalogItem';
 import ModalCartItem from './little/ModalCartItem';
+import Desc from './little/Desc';
 import ModalAside from './large/ModalAside';
 
 export {
@@ -18,4 +19,5 @@ export {
   ModalCart,
   ModalCartItem,
   ModalAside,
+  Desc,
 };

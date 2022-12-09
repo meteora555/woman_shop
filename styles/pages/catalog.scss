@@ -37,6 +37,10 @@
     &-item {
       display: flex;
       align-items: center;
+      transition: 0.3s linear;
+      &:hover {
+        color: #aea444;
+      }
     }
   }
   &__btn {
@@ -86,5 +90,10 @@
     background-color: black;
     padding: 8px;
     width: 110px;
+    transition: 0.3s linear;
+    &:hover {
+      color: black;
+      background-color: #d9d9d9;
+    }
   }
 }
