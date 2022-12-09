@@ -96,6 +96,10 @@
     grid-column-gap: 4px;
     grid-row-gap: 4px;
   }
+  .modalCart {
+    width: 70%;
+    top: -47%;
+  }
 }
 @media screen and (max-width: 600px) {
   .header__buttons {
