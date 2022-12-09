@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
-import ModalCart from '../large/ModalCart';
+import listenForOutsideClick from '../../services/outsideClick';
+import ModalCartItem from '../little/ModalCartItem';
 
 export default function NavBar() {
-  const [open, setOpen] = useState(true);
+  const menuRef = useRef(null);
+  const [listening, setListening] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+  console.log(isOpen, 'isopen');
+
+  useEffect(listenForOutsideClick(listening, setListening, menuRef, setIsOpen));
   return (
     <div className="bar">
-      <ModalCart open={open} />
       <div className="bar__filter">
         <ul className="bar__filter-list">
           <li className="bar__filter-item">
@@ -43,11 +49,47 @@ export default function NavBar() {
         <p>Сортировка:</p>
       </div>
       <div className="sort__popup"></div>
-      <div className="bar__cart">
-        <button onClick={() => setOpen(true)} className="cart__btn">
+      <div
+        onClick={() => {
+          console.log('push the btn');
+          setIsOpen(true);
+        }}
+        className="bar__cart">
+        <button className="cart__btn">
           <Image src="/content/icons/cart-btn.png" height={37} width={37} alt="filter-icon" />
         </button>
         <b>0</b>
+      </div>
+      <div ref={menuRef} className={isOpen ? 'modalCart' : 'modalCartHide '}>
+        <div className="modalCart__wraper">
+          <div onClick={toggle} className="modalCart__btn">
+            <button>закрыть</button>
+            <h2>Корзина</h2>
+          </div>
+
+          <div className="modalCart__items">
+            <ModalCartItem />
+            <ModalCartItem />
+            <ModalCartItem />
+            <ModalCartItem />
+            <ModalCartItem />
+            <ModalCartItem />
+            <ModalCartItem />
+          </div>
+          <div className="total">
+            <button>ПРОДОЛЖИТЬ ПОКУПКИ</button>
+            <button>ОФОРМИТЬ ЗАКАЗ</button>
+
+            <div className="total__items">
+              <p>Всего товаров</p>
+              <p>25 штук</p>
+            </div>
+            <div className="total__price">
+              <p>Стоимость</p>
+              <p>25000 ₽</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

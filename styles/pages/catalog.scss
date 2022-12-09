@@ -6,17 +6,17 @@
   padding: 100px 15px 50px 15px;
   position: relative;
 
-  // opacity: 0;
-  // animation: ani 3.5s forwards;
+  // // opacity: 0;
+  // // animation: ani 3.5s forwards;
 
-  @keyframes ani {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+  // @keyframes ani {
+  //   0% {
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
 
   &::after {
     position: absolute;
