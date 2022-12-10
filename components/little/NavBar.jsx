@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+
 import listenForOutsideClick from '../../services/outsideClick';
+import { useTypedSelector } from '../../store/index';
+
 import ModalCartItem from '../little/ModalCartItem';
 
 export default function NavBar() {
@@ -10,6 +13,9 @@ export default function NavBar() {
   const toggle = () => setIsOpen(!isOpen);
 
   useEffect(listenForOutsideClick(listening, setListening, menuRef, setIsOpen));
+
+  const { cart } = useTypedSelector((state) => state);
+
   return (
     <div className="bar">
       <div className="bar__filter">
@@ -67,13 +73,9 @@ export default function NavBar() {
           </div>
 
           <div className="modalCart__items">
-            <ModalCartItem />
-            <ModalCartItem />
-            <ModalCartItem />
-            <ModalCartItem />
-            <ModalCartItem />
-            <ModalCartItem />
-            <ModalCartItem />
+            {cart.map((product) => (
+              <ModalCartItem key={product.id} product={product} />
+            ))}
           </div>
           <div className="total">
             <button>ПРОДОЛЖИТЬ ПОКУПКИ</button>

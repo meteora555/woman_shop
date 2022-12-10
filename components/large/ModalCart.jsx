@@ -12,8 +12,6 @@ export default function ModalCart({ open }) {
 
   useEffect(listenForOutsideClick(listening, setListening, menuRef, setIsOpen));
 
-  const { cart } = useTypedSelector((state) => state);
-
   return (
     <div ref={menuRef} className={isOpen ? 'modalCart' : 'modalCartHide '}>
       <div className="modalCart__wraper">
@@ -23,13 +21,9 @@ export default function ModalCart({ open }) {
         </div>
 
         <div className="modalCart__items">
-          <ModalCartItem />
-          <ModalCartItem />
-          <ModalCartItem />
-          <ModalCartItem />
-          <ModalCartItem />
-          <ModalCartItem />
-          <ModalCartItem />
+          {cart.map((product) => (
+            <ModalCartItem key={product.id} product={product} />
+          ))}
         </div>
         <div className="total">
           <button>ПРОДОЛЖИТЬ ПОКУПКИ</button>

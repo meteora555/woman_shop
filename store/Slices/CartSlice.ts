@@ -4,7 +4,6 @@ import { Iproduct } from '../product/product.type';
 export type CartSlice = {
   items: Iproduct[];
   total?: number;
-  filter: (el: string) => void;
 };
 
 const initialState: Iproduct[] = [];
@@ -17,7 +16,7 @@ export const CartSlice = createSlice({
       state.push(action.payload);
     },
     removeItemFromCart: (state, action: PayloadAction<{ id: string }>) => {
-      state.filter((el: any) => el.id !== action.payload.id);
+      return state.filter((el) => el.id !== action.payload.id);
     },
   },
 });
