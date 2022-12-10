@@ -8,7 +8,7 @@ interface ModalCartItemProps {
     imageUrl: string;
     name: string;
     price: string;
-    id?: string | undefined;
+    id?: string;
   };
 }
 
