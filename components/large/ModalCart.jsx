@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import listenForOutsideClick from '../../services/outsideClick';
+import { useTypedSelector } from '../../store';
 import ModalCartItem from '../little/ModalCartItem';
 
 export default function ModalCart({ open }) {
@@ -10,6 +11,8 @@ export default function ModalCart({ open }) {
   const toggle = () => setIsOpen(!isOpen);
 
   useEffect(listenForOutsideClick(listening, setListening, menuRef, setIsOpen));
+
+  const { cart } = useTypedSelector((state) => state);
 
   return (
     <div ref={menuRef} className={isOpen ? 'modalCart' : 'modalCartHide '}>

@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { CatalogItem, Footer, HeaderDark, NavBar } from '../components';
 import { useGetProductsQuery } from '../store/product/product.api';
 // Тренировался несколькими способами получать данные, обычный фетч запрос по документации NextJs, с помощью своего апи из папки, и с помощью RTK
@@ -23,8 +24,9 @@ import { useGetProductsQuery } from '../store/product/product.api';
 //     <CatalogItem key={id} image={imageUrl} name={name} price={price} />
 //   ))}
 
-export default function Catalog() {
+const Catalog: FC = () => {
   const { data, isLoading, error } = useGetProductsQuery(32);
+
   return (
     <div className="container">
       <HeaderDark />
@@ -33,16 +35,13 @@ export default function Catalog() {
       <div className="catalog">
         <div className="catalog__items">
           {data?.map((product: any) => (
-            <CatalogItem
-              key={product.id}
-              image={product.imageUrl}
-              name={product.name}
-              price={product.price}
-            />
+            <CatalogItem key={product.id} product={product} />
           ))}
         </div>
       </div>
       <Footer />
     </div>
   );
-}
+};
+
+export default Catalog;

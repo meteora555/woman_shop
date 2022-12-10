@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts","**/*.js", "**/*.tsx","**/*.tsx", "pages/api/_document.js", "components/index.js", "pages/catalog.tsx", "components/little/NavBar.jsx", "components/large/HeaderDark.jsx", "components/large/ModalCart.jsx", "components/little/CatalogItem.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts","**/*.js", "**/*.tsx","**/*.tsx", "pages/api/_document.js", "components/index.js", "pages/catalog.tsx", "components/little/NavBar.jsx", "components/large/HeaderDark.jsx", "components/large/ModalCart.jsx", "components/little/CatalogItem.tsx"],
   "exclude": ["node_modules"]
 }
