@@ -1,9 +1,11 @@
-import { configureStore, ConfigureStoreOptions } from '@reduxjs/toolkit';
+import { configureStore, ConfigureStoreOptions, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { productApi } from './product/product.api';
 
 export const createStore = (options?: ConfigureStoreOptions['preloadedState'] | undefined) =>
   configureStore({
-    reducer: {},
+    reducer: { [productApi.reducerPath]: productApi.reducer },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productApi.middleware),
   });
 export const store = createStore();
 

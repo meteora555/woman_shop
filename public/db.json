@@ -1,0 +1,227 @@
+[
+    {
+        "id": "0",
+        "imageUrl": "https://i.ibb.co/D4dHbJs/bruki-1.png",
+        "name": "брюки зауженные лавандового цвета",
+       " price": "6090",
+        "category": "8"
+      },
+      {
+        "id": "1",
+        "imageUrl": "https://i.ibb.co/LNnqVNh/bruki-2.png",
+        "name": "брюки зауженные лавандового цвета",
+       " price": "6090",
+        "category": "8"
+      },
+      {
+        "id": "2",
+        "imageUrl": "https://i.ibb.co/sVBMQsV/bruki-3.png",
+        "name": "брюки зауженные лавандового цвета",
+       " price": "6090",
+        "category": "8"
+      },
+      {
+        "id": "3",
+        "imageUrl": "https://i.ibb.co/n7wSBP1/bruki-4.png",
+        "name": "брюки зауженные лавандового цвета",
+       " price": "6090",
+        "category": "8"
+      },
+      {
+        "id": "4",
+        "imageUrl": "https://i.ibb.co/MVm6MPF/blouse-4.jpg",
+        "name": "блузка белая",
+       " price": "1299",
+        "category": "3"
+      },
+      {
+        "id": "5",
+        "imageUrl": "https://i.ibb.co/Gny47yx/blouse-3.jpg",
+        "name": "блука белая с рукавом",
+       " price": "1390",
+        "category": "3"
+      },
+      {
+        "id": "6",
+        "imageUrl": "https://i.ibb.co/82mND92/blouse-2.jpg",
+        "name": "блузка черная",
+       " price": "1400",
+        "category": "3"
+      },
+      {
+        "id": "7",
+        "imageUrl": "https://i.ibb.co/hZ6FXqh/blouse-1.jpg",
+        "name": "блузка белая с воротником",
+       " price": "1899",
+        "category": "3"
+      },
+      {
+        "id": "8",
+        "imageUrl": "https://i.ibb.co/DtBKqs6/tshirt-4.jpg",
+        "name": "футболка черная",
+       " price": "799",
+        "category": "2"
+      },
+      {
+        "id": "9",
+        "imageUrl": "https://i.ibb.co/Jj9KxhV/tshirt-1.jpg",
+        "name": "футболка с принтом",
+       " price": "599",
+        "category": "2"
+      },
+      {
+        "id": "10",
+        "imageUrl": "https://i.ibb.co/vBG1Sn6/tshirt-3.jpg",
+        "name": "футболка с принтом",
+       " price": "899",
+        "category": "2"
+      },
+      {
+        "id": "11",
+        "imageUrl": "https://i.ibb.co/3Ym45Q9/tshirt-2.jpg",
+        "name": "футболка с принтом",
+       " price": "1200",
+        "category": "2"
+      },
+      {
+        "id": "12",
+        "imageUrl": "https://i.ibb.co/Gxf4rbk/top-3.jpg",
+        "name": "топ летний",
+       " price": "1399",
+        "category": "6"
+      },
+      {
+        "id": "13",
+        "imageUrl": "https://i.ibb.co/f8nRWjh/top-4.jpg",
+        "name": "топ черный",
+       " price": "999",
+        "category": "6"
+      },
+      {
+        "id": "14",
+        "imageUrl": "https://i.ibb.co/tbDKpr9/top-2.jpg",
+        "name": "топ белый",
+       " price": "1399",
+        "category": "6"
+      },
+      {
+        "id": "15",
+        "imageUrl": "https://i.ibb.co/QfgFCB8/top-1.jpg",
+        "name": "топ белый ",
+       " price": "1500",
+        "category": "6"
+      },
+      {
+        "id": "16",
+        "imageUrl": "https://i.ibb.co/6BB9YQ1/sweetshpot-4.jpg",
+        "name": "свитшот темно-серый",
+       " price": "2999",
+        "category": "5"
+      },
+      {
+        "id": "17",
+        "imageUrl": "https://i.ibb.co/tzbbCnj/sweetshpot-3.jpg",
+        "name": "свитшот серый",
+       " price": "2599",
+        "category": "5"
+      },
+      {
+        "id": "18",
+        "imageUrl": "https://i.ibb.co/TBgq2T6/sweetshpot-2.jpg",
+        "name": "свитшот черный",
+       " price": "2699",
+        "category": "5"
+      },
+      {
+        "id": "19",
+        "imageUrl": "https://i.ibb.co/stBTBkc/sweetshpot-1.jpg",
+        "name": "свитшот белый",
+       " price": "2799",
+        "category": "5"
+      },
+      {
+        "id": "20",
+        "imageUrl": "https://i.ibb.co/2t3z4Wc/skirt-4.jpg",
+        "name": "юбка серая",
+       " price": "1799",
+        "category": "4"
+      },
+      {
+        "id": "21",
+        "imageUrl": "https://i.ibb.co/XYwn828/skirt-3.jpg",
+        "name": "юбка черная",
+       " price": "1499",
+        "category": "4"
+      },
+      {
+        "id": "22",
+        "imageUrl": "https://i.ibb.co/XyNcK2y/skirt-2.jpg",
+        "name": "юбка черная длинная",
+       " price": "1999",
+        "category": "4"
+      },
+      {
+        "id": "24",
+        "imageUrl": "https://i.ibb.co/y810mm5/skirt-1.jpg",
+        "name": "юбка клетчатая",
+       " price": "1699",
+        "category": "4"
+      },
+      {
+        "id": "25",
+        "imageUrl": "https://i.ibb.co/N9DFJs3/jeans-4.jpg",
+        "name": "джинсы серые",
+       " price": "4999",
+        "category": "1"
+      },
+      {
+        "id": "26",
+        "imageUrl": "https://i.ibb.co/WkvxX22/jeans-3.jpg",
+        "name": "джинсы приталенные",
+       " price": "1999",
+        "category": "1"
+      },
+      {
+        "id": "27",
+        "imageUrl": "https://i.ibb.co/z66gZh5/jeans-2.jpg",
+        "name": "джинсы темно-синии",
+       " price": "4699",
+        "category": "1"
+      },
+      {
+        "id": "28",
+        "imageUrl": "https://i.ibb.co/chJ1rkj/jeans-1.jpg",
+        "name": "джинсы голубые",
+       " price": "4299",
+        "category": "1"
+      },
+      {
+        "id": "29",
+        "imageUrl": "https://i.ibb.co/KhM92vD/dress-4.jpg",
+        "name": "платье черное",
+       " price": "2200",
+        "category": "7"
+      },
+      {
+        "id": "30",
+        "imageUrl": "https://i.ibb.co/hCDGGsv/dress-3.jpg",
+        "name": "платье белое",
+       " price": "2400",
+        "category": "7"
+      },
+      {
+        "id": "31",
+        "imageUrl": "https://i.ibb.co/rcg83sm/dress-2.jpg",
+        "name": "платье черное обтягивающее",
+       " price": "2900",
+        "category": "7"
+      },
+      {
+        "id": "32",
+        "imageUrl": "https://i.ibb.co/ZTGTK5h/dress-1.jpg",
+        "name": "платье черное летнее",
+       " price": "1900",
+        "category": "7"
+      }
+   
+   ]
