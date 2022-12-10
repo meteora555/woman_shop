@@ -18,9 +18,6 @@ export default function Home() {
       <CSSTransition in={show} classNames="header" timeout={500} unmountOnExit>
         <Header />
       </CSSTransition>
-      {/* <CSSTransition in={show} classNames="main__desc" timeout={500} unmountOnExit>
-        <Desc />
-      </CSSTransition> */}
 
       <MainContent />
       <Image
