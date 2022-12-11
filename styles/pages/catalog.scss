@@ -1,3 +1,79 @@
+.section-title-block {
+  text-align: center;
+  position: relative;
+  padding: 40px 68px 10px 68px;
+  overflow: hidden;
+  border-bottom: 1px solid #d8d8d8;
+  line-height: 20px;
+  h2 {
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 1em;
+    color: #000;
+    margin: 0;
+  }
+  p {
+    text-align: center;
+    max-width: 45%;
+    color: #000;
+    font-weight: 500;
+    margin: 28px auto 0;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.main__catalog {
+  &__sort {
+    padding: 20px 15px;
+    &-menu {
+      display: flex;
+      justify-content: end;
+    }
+  }
+  &__products {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
+  }
+}
+.catalog {
+  &__filter {
+    padding: 20px 5px 5px 20px;
+    border-top: 1px solid #d8d8d8;
+    max-width: 275px;
+    h2 {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 22px;
+      color: #000;
+      text-align: left;
+      margin: 0 0 16px;
+    }
+    &-item {
+      padding-bottom: 10px;
+    }
+  }
+  &__btn {
+    background: none;
+    color: black;
+    min-width: 100px;
+    padding: 10px;
+    text-align: left;
+    transition: 0.27s linear;
+    &:hover {
+      color: #aea444;
+      scale: 1.08;
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+}
+
 .bar {
   display: flex;
   align-items: center;
@@ -60,16 +136,16 @@
   width: 52px;
   height: 52px;
 }
-.catalog {
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    padding: 0 15px;
-  }
-}
+// .catalog {
+//   &__items {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     grid-template-rows: repeat(4, 1fr);
+//     grid-column-gap: 15px;
+//     grid-row-gap: 15px;
+//     padding: 0 15px;
+//   }
+// }
 .catalogItem {
   text-align: center;
   box-shadow: 5px 3px 6px #b5b3b3;

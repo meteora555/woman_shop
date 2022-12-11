@@ -1,22 +1,11 @@
 import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import ModalAside from './BurgerWindow';
 
 const Header = () => {
-  const [visibleAside, setVisebleAside] = useState(false);
-
-  const toogleVisibleAside = () => {
-    setVisebleAside(!visibleAside);
-  };
-
   return (
-    <div className="header__dark">
-      {visibleAside && <ModalAside />}
+    <div className="header__catalog">
       <nav className="nav">
-        <button className="header__burger-btn" onClick={toogleVisibleAside}>
-          <Image src="/content/icons/burger_dark.svg" height={52} width={52} alt="burger-icon" />
-        </button>
         <Link href={'/'}>
           <div className="header__logo">
             <Image src="/content/icons/logo-dark.png" height={67} width={67} alt="logo-icon" />
@@ -27,17 +16,14 @@ const Header = () => {
           </div>
         </Link>
         <div className="header__inner inner-dark">
-          <Link href={'/catalog'}>Женщинам</Link>
-          <Link href={'/catalog'}>Мужчинам</Link>
-          <Link href={'/about'}>Сотрудничество</Link>
-          <Link href={'/about'}>8 (452) 123-456</Link>
+          <Link href={'/catalog'}>НОВИНКИ</Link>
+          <Link href={'/catalog'}>SALE</Link>
+          <Link href={'/about'}>ОДЕЖДА</Link>
+          <Link href={'/about'}>АКСЕССУАРЫ</Link>
         </div>
         <div className="header__buttons">
           <button className="header__buttons-auth">
             <Image src="/content/icons/auth-dark.svg" height={25} width={25} alt="auth-icon" />
-          </button>
-          <button className="header__buttons-search">
-            <Image src="/content/icons/search-dark.svg" height={25} width={25} alt="search-icon" />
           </button>
           <button className="header__buttons-favorite">
             <Image
@@ -46,6 +32,9 @@ const Header = () => {
               width={25}
               alt="favorite-icon"
             />
+          </button>
+          <button className="header__buttons-auth">
+            <Image src="/content/icons/auth-dark.svg" height={25} width={25} alt="auth-icon" />
           </button>
         </div>
       </nav>

@@ -1,5 +1,5 @@
 import Header from './large/Header';
-import HeaderDark from './large/HeaderDark';
+import HeaderCatalog from './large/HeaderCatalog';
 import Footer from './large/Footer';
 import MainContent from './large/MainContent';
 import ModalCart from './large/ModalCart';
@@ -13,7 +13,7 @@ export {
   Header,
   Footer,
   MainContent,
-  HeaderDark,
+  HeaderCatalog,
   NavBar,
   CatalogItem,
   ModalCart,

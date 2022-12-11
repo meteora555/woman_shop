@@ -45,17 +45,14 @@ const Header: React.FC = () => {
           </span>
         </div>
         <div className="header__inner ">
-          <Link href={'/catalog'}>Женщинам</Link>
-          <Link href={'/catalog'}>Мужчинам</Link>
-          <Link href={'/about'}>Сотрудничество</Link>
-          <Link href={'/about'}>8 (452) 123-456</Link>
+          <Link href={'/catalog'}>НОВИНКИ</Link>
+          <Link href={'/catalog'}>SALE</Link>
+          <Link href={'/about'}>ОДЕЖДА</Link>
+          <Link href={'/about'}>АКСЕССУАРЫ</Link>
         </div>
         <div className="header__buttons">
           <button className="header__buttons-auth">
             <Image src="/content/icons/auth.svg" height={25} width={25} alt="auth-icon" />
-          </button>
-          <button className="header__buttons-search">
-            <Image src="/content/icons/search.svg" height={25} width={25} alt="search-icon" />
           </button>
           <button className="header__buttons-favorite">
             <Image src="/content/icons/favorite.png" height={25} width={25} alt="favorite-icon" />

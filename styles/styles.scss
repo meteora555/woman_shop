@@ -62,14 +62,18 @@
       transition: 0.27s linear;
       &:hover {
         color: #aea444;
+        scale: 1.08;
       }
+    }
+    a:nth-child(2) {
+      color: red;
     }
   }
 
   &__buttons {
     display: flex;
     align-items: center;
-    padding-right: 75px;
+
     column-gap: 4px;
     &-auth,
     &-search,
@@ -82,7 +86,7 @@
     }
   }
 }
-.header__dark {
+.header__catalog {
   padding: 2.3rem 0;
   width: 100%;
   position: relative;
@@ -101,6 +105,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 70px;
 }
 .welcome {
   position: absolute;

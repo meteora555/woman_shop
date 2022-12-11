@@ -30,6 +30,7 @@ const CatalogItem: FC<CatalogItemProps> = ({ product }) => {
         <button onClick={() => !isHaveInCart && addItemToCart(product)}>
           {isHaveInCart ? 'в корзине' : 'добавить'}
         </button>
+        {/* <PlusCircleFilled /> */}
       </span>
     </div>
   );
