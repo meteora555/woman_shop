@@ -127,9 +127,9 @@
 .main__desc {
   position: absolute;
   top: 120%;
-  left: 3%;
+  left: 18%;
   z-index: 1;
-  width: 100%;
+  width: 70%;
   text-align: center;
   &-title {
     color: #fff;
@@ -142,7 +142,7 @@
   &-text {
     position: absolute;
     top: 90;
-    left: 29%;
+    left: 21%;
     color: #fff;
     font-weight: 200;
     font-size: 60px;
@@ -154,7 +154,7 @@
   &-btn {
     position: absolute;
     top: 255px;
-    left: 635px;
+    left: 424px;
     width: 200px;
     height: 75px;
     border: 1px solid #fff;

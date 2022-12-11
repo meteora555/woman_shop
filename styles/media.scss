@@ -1,24 +1,45 @@
 @media screen and (max-width: 1410px) {
   .header__inner {
+    margin-left: 0px;
     a:nth-child(even) {
       display: none;
     }
+  }
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
   }
   .bar {
     &::after {
       width: 1000px;
     }
   }
-}
-@media screen and (max-width: 1135px) {
-  .header__logo {
-    span {
+  .main__desc {
+    &-text,
+    &-btn {
       display: none;
     }
-    img {
-      margin-left: 25px;
+  }
+}
+@media screen and (max-width: 1135px) {
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .header {
+    &__logo {
+      span {
+        display: none;
+      }
+      img {
+        margin-left: 25px;
+      }
+    }
+    &__buttons {
+      padding-right: 0px;
     }
   }
+
   .bar {
     &::after {
       width: 700px;
@@ -27,9 +48,7 @@
   .mouse {
     left: 550px;
   }
-  .header__inner {
-    margin-left: auto;
-  }
+
   .main__desc {
     p {
       display: none;
@@ -38,13 +57,24 @@
       display: none;
     }
     &-title {
-      font-size: 20px;
+      font-size: 28px;
       font-weight: 400;
     }
   }
   .modalAside {
     &__img {
       display: none;
+    }
+  }
+  .footer {
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__menu {
+      padding: 20px;
+      text-align: center;
     }
   }
 }
@@ -94,14 +124,7 @@
       padding: 2px;
     }
   }
-  .footer__info {
-    display: block;
-  }
-  .footer__menu {
-    padding: 10px;
-    margin: 0 auto;
-    width: 300px;
-  }
+
   .bar {
     flex-direction: column;
     &__filter-item {
@@ -121,11 +144,28 @@
     width: 70%;
     top: -47%;
   }
+  .footer {
+    &__about {
+      width: auto;
+    }
+  }
 }
 @media screen and (max-width: 600px) {
-  .header__buttons {
-    display: none;
+  .nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+  .header {
+    &__buttons {
+      display: none;
+    }
+    &__burger-btn {
+      margin-left: 0px;
+    }
+  }
+
   .bar {
     &::after {
       width: 300px;
@@ -134,10 +174,7 @@
   .mouse {
     left: 300px;
   }
-  .footer__about {
-    width: 300px;
-    margin: 0 auto;
-  }
+
   .bar {
     &__filter-item {
       font-size: 10px;
