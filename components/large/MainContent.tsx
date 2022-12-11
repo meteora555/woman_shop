@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,6 +9,8 @@ import 'swiper/scss/pagination';
 import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
 
 SwiperCore.use([Pagination, Navigation]);
+
+//Используем swiper для реализации слайдера, по документации прокидываем пропсы с настройками, объязательно прописать пропс модули!!!
 
 const MainContent = (): JSX.Element => {
   return (
@@ -58,7 +61,9 @@ const MainContent = (): JSX.Element => {
             <Image src="/content/order/1.png" height={510} width={475} alt="Order - 1" />
           </div>
         </div>
-        <h2 className="order-title">Категории</h2>
+        <Link href={'/catalog'}>
+          <h2 className="order-title">Категории</h2>
+        </Link>
         <div className="category__list">
           <div className="category__list-big">
             <Image src="/content/order/category_1.png" height={600} width={700} alt="Order - 1" />

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Home from './home';
 
+// Рендерим основную страницу,с компонентом home
 const HomePage = (): JSX.Element => {
   return (
     <>

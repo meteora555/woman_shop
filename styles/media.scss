@@ -4,6 +4,11 @@
       display: none;
     }
   }
+  .bar {
+    &::after {
+      width: 1000px;
+    }
+  }
 }
 @media screen and (max-width: 1135px) {
   .header__logo {
@@ -13,6 +18,14 @@
     img {
       margin-left: 25px;
     }
+  }
+  .bar {
+    &::after {
+      width: 700px;
+    }
+  }
+  .mouse {
+    left: 550px;
   }
   .header__inner {
     margin-left: auto;
@@ -40,6 +53,14 @@
     span {
       display: block;
     }
+  }
+  .bar {
+    &::after {
+      width: 600px;
+    }
+  }
+  .mouse {
+    left: 450px;
   }
   .header__inner {
     display: none;
@@ -104,6 +125,14 @@
 @media screen and (max-width: 600px) {
   .header__buttons {
     display: none;
+  }
+  .bar {
+    &::after {
+      width: 300px;
+    }
+  }
+  .mouse {
+    left: 300px;
   }
   .footer__about {
     width: 300px;
