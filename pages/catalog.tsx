@@ -25,6 +25,7 @@ import { useGetProductsQuery } from '../store/product/product.api';
 //   ))}
 
 const Catalog: FC = () => {
+  //В конечном варианте, использован хук из Rtk, затем мепим нашу дату,и рендерим компонент CatalogItem, в пропсы передаем весь обьект
   const { data, isLoading, error } = useGetProductsQuery(32);
 
   return (

@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../store';
 
+//описываем пропсы, в котором целый обьект с опр свойствами, через useAction вызываем экшен на добавление в корзину, и сам стейт корзины, в поля прокидываем данные из пропсов, дополнительно реализуем фичу на кнопки добавить и если добавлено уже в корзине, и больше добавить нельзя
 interface CatalogItemProps {
   product: {
     imageUrl: string;

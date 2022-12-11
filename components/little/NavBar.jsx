@@ -6,6 +6,8 @@ import { useTypedSelector } from '../../store/index';
 
 import ModalCartItem from '../little/ModalCartItem';
 
+//Использована библиотека на клик вне области, все равно работает криво надо будет отрефакторить, и разобраться.
+
 export default function NavBar() {
   const menuRef = useRef(null);
   const [listening, setListening] = useState(true);

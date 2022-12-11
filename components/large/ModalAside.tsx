@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+//можно отрефакторить, создать массив в котором будут категории, и сезоны, и потом пройти мепом и нормально отрендерить
+
 export default function ModalAside() {
   return (
     <div className="modalAside">

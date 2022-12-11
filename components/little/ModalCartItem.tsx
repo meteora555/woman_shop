@@ -3,6 +3,8 @@ import { FC } from 'react';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../store';
 
+//Типизируем пропсы, и передаем в компонент, берем экшен на удаление предметов.
+
 interface ModalCartItemProps {
   product: {
     imageUrl: string;
