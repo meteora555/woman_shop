@@ -7,7 +7,7 @@ import NavBar from './little/NavBar';
 import CatalogItem from './little/CatalogItem';
 import ModalCartItem from './little/ModalCartItem';
 import Desc from './little/Desc';
-import ModalAside from './large/ModalAside';
+import BurgerWindow from './large/BurgerWindow';
 
 export {
   Header,
@@ -18,6 +18,6 @@ export {
   CatalogItem,
   ModalCart,
   ModalCartItem,
-  ModalAside,
+  BurgerWindow,
   Desc,
 };

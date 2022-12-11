@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import ModalAside from './ModalAside';
+import ModalAside from './BurgerWindow';
 
 const Header = () => {
   const [visibleAside, setVisebleAside] = useState(false);

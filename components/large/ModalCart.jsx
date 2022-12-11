@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import listenForOutsideClick from '../../services/outsideClick';
+
 import { useTypedSelector } from '../../store';
 import ModalCartItem from '../little/ModalCartItem';
 

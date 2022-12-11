@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import listenForOutsideClick from '../../services/outsideClick';
 import { useTypedSelector } from '../../store/index';
 
 import ModalCartItem from '../little/ModalCartItem';
@@ -9,13 +8,6 @@ import ModalCartItem from '../little/ModalCartItem';
 //Использована библиотека на клик вне области, все равно работает криво надо будет отрефакторить, и разобраться.
 
 export default function NavBar() {
-  const menuRef = useRef(null);
-  const [listening, setListening] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-
-  useEffect(listenForOutsideClick(listening, setListening, menuRef, setIsOpen));
-
   const { cart } = useTypedSelector((state) => state);
 
   return (
@@ -67,12 +59,12 @@ export default function NavBar() {
         </button>
         <b>0</b>
       </div>
-      <div ref={menuRef} className={isOpen ? 'modalCart' : 'modalCartHide '}>
-        <div className="modalCart__wraper">
-          <div onClick={toggle} className="modalCart__btn">
-            <button>закрыть</button>
-            <h2>Корзина</h2>
-          </div>
+      {/* <div className={isOpen ? 'modalCart' : 'modalCartHide '}> */}
+      <div className="modalCart__wraper">
+        <div className="modalCart__btn">
+          <button>закрыть</button>
+          <h2>Корзина</h2>
+          {/* </div> */}
 
           <div className="modalCart__items">
             {cart.map((product) => (

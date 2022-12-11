@@ -1,32 +1,40 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { Button, Space } from 'antd';
+import { Drawer } from 'antd';
+import type { DrawerProps } from 'antd';
 
-import ModalAside from './ModalAside';
+import BurgerWindow from './BurgerWindow';
 import { Desc } from '../little/Desc';
 
-const Header = (): JSX.Element => {
-  const [visibleAside, setVisebleAside] = useState(false);
-  const asideRef = useRef();
-  const toogleVisibleAside = () => {
-    setVisebleAside(!visibleAside);
+const Header: React.FC = () => {
+  const [open, setOpen] = useState(false);
+  const [placement, setPlacement] = useState<DrawerProps['placement']>('right');
+
+  const showDrawer = () => {
+    setOpen(true);
   };
-  const OutsideClickAside = (e: any) => {
-    if (!e.path.includes(asideRef.current)) {
-      setVisebleAside(false);
-    }
+
+  const onClose = () => {
+    setOpen(false);
   };
 
   return (
     <div className="header">
       <Desc />
-      {visibleAside && <ModalAside />}
-
+      <Drawer
+        placement={placement}
+        closable={false}
+        onClose={onClose}
+        open={open}
+        key={placement}
+        width="400">
+        <BurgerWindow />
+      </Drawer>
       <nav className="nav">
-        <button className="header__burger-btn " onClick={toogleVisibleAside}>
+        <button className="header__burger-btn " onClick={showDrawer}>
           <Image src="/content/icons/burger.svg" height={52} width={52} alt="burger-icon" />
         </button>
         <div className="header__logo">
