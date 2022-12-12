@@ -1,27 +1,39 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
+import BasketItem from '../little/BasketItem';
 
 import { useTypedSelector } from '../../store';
-import ModalCartItem from '../little/ModalCartItem';
+
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 const ModalCart: React.FC = () => {
+  const { cart } = useTypedSelector((state) => state);
   return (
-    <div>
-      <div className="modalCart__wraper">
-        <div className="modalCart__items">
-          {/* {cart.map((product) => (
-            <ModalCartItem key={product.id} product={product} />
-          ))} */}
-        </div>
-        <div className="total">
-          <button className="modalCart__btn">ОФОРМИТЬ ЗАКАЗ</button>
-
-          <div className="total__items">
-            <p>Всего товаров</p>
-            <p>25 штук</p>
-          </div>
-          <div className="total__price">
-            <p>Стоимость</p>
-            <p>25000 ₽</p>
+    <div className="modal__wrapper">
+      <div className="modal__content">
+        <div className="basket">
+          <div className="basket__wrapper">
+            <div className="basket__list">
+              <div className="basket__items">
+                <Scrollbars autoHide={true}>
+                  {cart.map((product) => (
+                    <BasketItem key={product.id} product={product} />
+                  ))}
+                </Scrollbars>
+              </div>
+              <div className="basket__bottom">
+                <div className="basket__quantity">
+                  <div className="basket__quantity-title">КОЛИЧЕСТВО</div>
+                  <div className="basket__quantity-value">10</div>
+                </div>
+                <div className="basket__total">
+                  <div className="basket__total-title">ИТОГО</div>
+                  <div className="basket__total-value">11 204 ₽</div>
+                </div>
+                <div className="basket__button">
+                  <button>ОФОРМИТЬ ЗАКАЗ</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

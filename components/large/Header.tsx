@@ -34,9 +34,6 @@ const Header: React.FC = () => {
         <BurgerWindow />
       </Drawer>
       <nav className="nav">
-        <button className="header__burger-btn " onClick={showBurger}>
-          <Image src="/content/icons/burger.svg" height={52} width={52} alt="burger-icon" />
-        </button>
         <div className="header__logo">
           <Image src="/content/icons/logo.svg" height={67} width={67} alt="logo-icon" />
           <span>
@@ -56,6 +53,9 @@ const Header: React.FC = () => {
           </button>
           <button className="header__buttons-favorite">
             <Image src="/content/icons/favorite.png" height={25} width={25} alt="favorite-icon" />
+          </button>
+          <button className="header__buttons-burger" onClick={showBurger}>
+            <Image src="/content/icons/burger.svg" height={52} width={52} alt="burger-icon" />
           </button>
         </div>
       </nav>

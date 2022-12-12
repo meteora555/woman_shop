@@ -5,7 +5,7 @@ import MainContent from './large/MainContent';
 import ModalCart from './large/ModalCart';
 import NavBar from './little/NavBar';
 import CatalogItem from './little/CatalogItem';
-import ModalCartItem from './little/ModalCartItem';
+import BasketItem from './little/BasketItem';
 import Desc from './little/Desc';
 import BurgerWindow from './large/BurgerWindow';
 
@@ -17,7 +17,7 @@ export {
   NavBar,
   CatalogItem,
   ModalCart,
-  ModalCartItem,
+  BasketItem,
   BurgerWindow,
   Desc,
 };

@@ -45,7 +45,7 @@ const Catalog: FC = () => {
           Новый сезон — новые тренды. Самое время узнать их поближе.
         </p>
       </section>
-      <section className="main__catalog">
+      <div className="main__catalog">
         <div className="main__catalog__sort">
           <div className="main__catalog__sort-menu">
             <Select
@@ -114,7 +114,7 @@ const Catalog: FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <Footer />
     </div>

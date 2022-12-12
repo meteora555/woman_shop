@@ -1,9 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import { useTypedSelector } from '../../store/index';
-
-import ModalCartItem from '../little/ModalCartItem';
+import ModalCartItem from './BasketItem';
 
 //Использована библиотека на клик вне области, все равно работает криво надо будет отрефакторить, и разобраться.
 

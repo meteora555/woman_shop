@@ -57,11 +57,11 @@ export default function BurgerWindow() {
         </ul>
       </div>
       <div className="BurgerWindow__img">
-        <Link href={'/catalog'}>
+        <Link href={'/catalog/clothes'}>
           <Image
-            src="/content/aside/collection-1.png"
-            height={370}
-            width={390}
+            src="/content/catalog/sweetshpot-1.jpg"
+            height={400}
+            width={380}
             alt="BurgerWindow__img"
           />
         </Link>
