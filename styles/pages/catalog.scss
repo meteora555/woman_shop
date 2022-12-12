@@ -73,6 +73,11 @@
     grid-row-gap: 10px;
   }
 }
+.catalog__btn-active {
+  color: #887e1f;
+  scale: 1.08;
+  font-weight: 800;
+}
 
 .bar {
   display: flex;
@@ -136,48 +141,70 @@
   width: 52px;
   height: 52px;
 }
-// .catalog {
-//   &__items {
-//     display: grid;
-//     grid-template-columns: repeat(4, 1fr);
-//     grid-template-rows: repeat(4, 1fr);
-//     grid-column-gap: 15px;
-//     grid-row-gap: 15px;
-//     padding: 0 15px;
-//   }
-// }
 .catalogItem {
   text-align: center;
-  box-shadow: 5px 3px 6px #b5b3b3;
+  box-shadow: 1px 7px 9px #b5b3b3;
+  border-radius: 23px;
+  transition: 0.27s linear;
+  max-width: 240px;
+  max-height: 450px;
+  &:hover {
+    scale: 1.01;
+    box-shadow: 1px 7px 9px #aea444;
+  }
   img {
-    width: auto;
-    height: auto;
+    max-width: 240px;
+    max-height: 325px;
+    padding: 5px;
+    border-radius: 23px 23px 0 0;
   }
-  h5 {
-    text-transform: uppercase;
-    font-weight: 400;
-    padding-bottom: 5px;
-    padding-top: 10px;
-  }
+
   p {
     font-size: 12px;
+    text-align: left;
+    text-transform: lowercase;
+    margin: 0 5px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   span {
     display: flex;
     justify-content: space-evenly;
+    column-gap: 30px;
     padding-bottom: 10px;
     padding-top: 10px;
     align-items: center;
+    transition: 0.5s linear;
   }
   button {
-    color: #fff;
-    background-color: black;
-    padding: 8px;
-    width: 110px;
     transition: 0.3s linear;
-    &:hover {
-      color: black;
-      background-color: #d9d9d9;
+    background: none;
+    span {
+      svg {
+        width: 26px;
+        height: 26px;
+        &:hover {
+          scale: 1.2;
+        }
+      }
     }
+  }
+  &__title {
+    border-radius: 0 0 5px 5px;
+    margin: 0 5px;
+    h5 {
+      font-size: 12px;
+      text-transform: uppercase;
+      line-height: 13px;
+      font-weight: 500;
+      color: #000;
+      margin: 0 0 4px;
+      padding: 5px;
+      text-align: left;
+      white-space: wrap;
+      overflow: hidden;
+    }
+    background: #aea444; /* Цвет фона */
   }
 }

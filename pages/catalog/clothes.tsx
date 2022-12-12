@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { CatalogItem, Footer, HeaderCatalog, NavBar } from '../components';
-import { useGetProductsQuery } from '../store/product/product.api';
+import { CatalogItem, Footer, HeaderCatalog, NavBar } from '../../components';
+import { useGetProductsQuery } from '../../store/product/product.api';
 
 import { DownOutlined } from '@ant-design/icons';
 import { Select } from 'antd';
@@ -81,7 +81,7 @@ const Catalog: FC = () => {
             <h2>Категории</h2>
             <ul className="catalog__filter-list">
               <li className="catalog__filter-item">
-                <button className="catalog__btn">Джинсы</button>
+                <button className="catalog__btn catalog__btn-active">Джинсы</button>
               </li>
               <li className="catalog__filter-item">
                 <button className="catalog__btn">Футболки</button>

@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState<DrawerProps['placement']>('right');
 
-  const showDrawer = () => {
+  const showBurger = () => {
     setOpen(true);
   };
 
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
         <BurgerWindow />
       </Drawer>
       <nav className="nav">
-        <button className="header__burger-btn " onClick={showDrawer}>
+        <button className="header__burger-btn " onClick={showBurger}>
           <Image src="/content/icons/burger.svg" height={52} width={52} alt="burger-icon" />
         </button>
         <div className="header__logo">
@@ -45,10 +45,10 @@ const Header: React.FC = () => {
           </span>
         </div>
         <div className="header__inner ">
-          <Link href={'/catalog'}>НОВИНКИ</Link>
-          <Link href={'/catalog'}>SALE</Link>
-          <Link href={'/about'}>ОДЕЖДА</Link>
-          <Link href={'/about'}>АКСЕССУАРЫ</Link>
+          <Link href={'/catalog/clothes'}>НОВИНКИ</Link>
+          <Link href={'/catalog/clothes'}>SALE</Link>
+          <Link href={'/catalog/clothes'}>ОДЕЖДА</Link>
+          <Link href={'/catalog/accessories'}>АКСЕССУАРЫ</Link>
         </div>
         <div className="header__buttons">
           <button className="header__buttons-auth">

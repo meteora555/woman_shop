@@ -7,11 +7,11 @@ export const Desc = () => {
     <div className="main__desc">
       <h2 className="main__desc-title">ANTONETTI</h2>
       <p className="main__desc-text">российский бренд женской одежды</p>
-      <button className="main__desc-btn">
-        <Link href={'/catalog'}>ПЕРЕЙТИ В КАТАЛОГ</Link>
-      </button>
+      <Link href={'/catalog/clothes'}>
+        <button className="main__desc-btn">ПЕРЕЙТИ В КАТАЛОГ</button>
+      </Link>
       <button className="main__desc-ring">
-        <Link href={'/catalog'}>
+        <Link href={'/catalog/clothes'}>
           <Image src="/content/icons/ring.png" height={80} width={80} alt="ring-icon" />
         </Link>
       </button>

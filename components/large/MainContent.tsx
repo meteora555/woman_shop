@@ -61,7 +61,7 @@ const MainContent = (): JSX.Element => {
             <Image src="/content/order/1.png" height={510} width={475} alt="Order - 1" />
           </div>
         </div>
-        <Link href={'/catalog'}>
+        <Link href={'/catalog/clothes'}>
           <h2 className="order-title">Категории</h2>
         </Link>
         <div className="category__list">
