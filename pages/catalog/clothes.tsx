@@ -1,9 +1,11 @@
-import React, { FC } from 'react';
-import { CatalogItem, Footer, HeaderCatalog, NavBar } from '../../components';
+import React, { FC, useState } from 'react';
+import Image from 'next/image';
+import { CatalogItem, Footer, HeaderCatalog } from '../../components';
 import { useGetProductsQuery } from '../../store/product/product.api';
 
-import { DownOutlined } from '@ant-design/icons';
-import { Select } from 'antd';
+import { DownOutlined, MenuUnfoldOutlined, CloseSquareFilled } from '@ant-design/icons';
+import { Select, Drawer, Space } from 'antd';
+import type { DrawerProps } from 'antd';
 
 // Тренировался несколькими способами получать данные, обычный фетч запрос по документации NextJs, с помощью своего апи из папки, и с помощью RTK
 // const BASE_URL = 'https://632346ad362b0d4e7de066f9.mockapi.io/clothes';
@@ -31,6 +33,15 @@ import { Select } from 'antd';
 const Catalog: FC = () => {
   //В конечном варианте, использован хук из Rtk, затем мепим нашу дату,и рендерим компонент CatalogItem, в пропсы передаем весь обьект
   const { data, isLoading, error } = useGetProductsQuery(32);
+
+  const [open, setOpen] = useState(false);
+  const [placement, setPlacement] = useState<DrawerProps['placement']>('left');
+  const showBurger = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="container">
@@ -105,6 +116,53 @@ const Catalog: FC = () => {
                 <button className="catalog__btn">Брюки</button>
               </li>
             </ul>
+          </div>
+          <div className="filter__mobile">
+            <Drawer
+              title="Категории"
+              placement={placement}
+              closable={false}
+              onClose={onClose}
+              open={open}
+              key={placement}
+              width="60%"
+              extra={
+                <Space>
+                  <button className="mobile__btn" onClick={onClose}>
+                    <CloseSquareFilled style={{ fontSize: '20px' }} />
+                  </button>
+                </Space>
+              }>
+              <ul className="catalog__filter-list">
+                <li className="catalog__filter-item">
+                  <button className="catalog__btn catalog__btn-active">Джинсы</button>
+                </li>
+                <li className="catalog__filter-item">
+                  <button className="catalog__btn">Футболки</button>
+                </li>
+                <li className="catalog__filter-item">
+                  <button className="catalog__btn">Блузы</button>
+                </li>
+                <li className="catalog__filter-item">
+                  <button className="catalog__btn">Юбки</button>
+                </li>
+                <li className="catalog__filter-item">
+                  <button className="catalog__btn">Свитшоты</button>
+                </li>
+                <li className="catalog__filter-item">
+                  <button className="catalog__btn">Топы и майки</button>
+                </li>
+                <li className="catalog__filter-item">
+                  <button className="catalog__btn">Платья</button>
+                </li>
+                <li className="catalog__filter-item">
+                  <button className="catalog__btn">Брюки</button>
+                </li>
+              </ul>
+            </Drawer>
+            <button onClick={showBurger}>
+              <MenuUnfoldOutlined style={{ fontSize: '30px' }} />
+            </button>
           </div>
           <div className="catalog__block">
             <div className="catalog__items">

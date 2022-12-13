@@ -7,7 +7,6 @@ export default function BurgerWindow() {
   return (
     <div className="BurgerWindow">
       <div className="categories">
-        <h2 className="BurgerWindow__title">Наша коллекция</h2>
         <ul>
           <li>
             <Link href={'/catalog'}>Зима 2022</Link>

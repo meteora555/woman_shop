@@ -30,7 +30,7 @@ const Header: React.FC = () => {
             </button>
           </Space>
         }
-        width="40%">
+        width="550px">
         <ModalCart />
       </Drawer>
       <nav className="nav">

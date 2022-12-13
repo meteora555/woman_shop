@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { Drawer } from 'antd';
+import { Drawer, Space } from 'antd';
 import type { DrawerProps } from 'antd';
 
 import BurgerWindow from './BurgerWindow';
@@ -25,12 +25,20 @@ const Header: React.FC = () => {
     <div className="header">
       <Desc />
       <Drawer
+        title="Наши коллекции"
         placement={placement}
         closable={false}
         onClose={onClose}
         open={open}
         key={placement}
-        width="400">
+        width="400"
+        extra={
+          <Space>
+            <button className="modalCart__btn" onClick={onClose}>
+              закрыть
+            </button>
+          </Space>
+        }>
         <BurgerWindow />
       </Drawer>
       <nav className="nav">
