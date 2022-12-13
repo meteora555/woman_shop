@@ -8,6 +8,8 @@ import CatalogItem from './little/CatalogItem';
 import BasketItem from './little/BasketItem';
 import Desc from './little/Desc';
 import BurgerWindow from './large/BurgerWindow';
+import OrderList from './little/OrderList';
+import CategoriesList from './little/CategoriesList';
 
 export {
   Header,
@@ -20,4 +22,6 @@ export {
   BasketItem,
   BurgerWindow,
   Desc,
+  OrderList,
+  CategoriesList,
 };

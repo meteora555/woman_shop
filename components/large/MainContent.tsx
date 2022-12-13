@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { OrderList, CategoriesList } from '../../components';
 
 import 'swiper/scss';
 import 'swiper/scss/pagination';
@@ -11,6 +12,7 @@ import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
 SwiperCore.use([Pagination, Navigation]);
 
 //Используем swiper для реализации слайдера, по документации прокидываем пропсы с настройками, объязательно прописать пропс модули!!!
+// Если будет время можно переписать на класс img и наследоваться от него
 
 const MainContent = (): JSX.Element => {
   return (
@@ -54,32 +56,11 @@ const MainContent = (): JSX.Element => {
         <div className="order">
           <h2 className="order-title">Заказ коллекции</h2>
         </div>
-        <div className="order__list">
-          <div className="order__item">
-            <Image
-              src="/content/catalog/sweetshpot-2.jpg"
-              height={600}
-              width={375}
-              alt="Order - 1"
-            />
-            <Image src="/content/catalog/dress-3.jpg" height={600} width={375} alt="Order - 1" />
-            <Image src="/content/catalog/dress-2.jpg" height={600} width={375} alt="Order - 1" />
-          </div>
-        </div>
+        <OrderList />
         <Link href={'/catalog/clothes'}>
           <h2 className="order-title">Категории</h2>
         </Link>
-        <div className="category__list">
-          <div className="category__list-big">
-            <Image src="/content/aside/collection-1.png" height={600} width={700} alt="Order - 1" />
-          </div>
-          <div className="category__list-litle">
-            <Image src="/content/order/category_3.png" height={510} width={475} alt="Order - 1" />
-            <Image src="/content/order/category_5.png" height={510} width={475} alt="Order - 1" />
-            <Image src="/content/order/category_4.png" height={510} width={475} alt="Order - 1" />
-            <Image src="/content/order/category_2.png" height={510} width={475} alt="Order - 1" />
-          </div>
-        </div>
+        <CategoriesList />
       </section>
     </>
   );

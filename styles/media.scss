@@ -112,19 +112,25 @@
       width: 200px;
     }
   }
-  .order__item {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 7px;
-    grid-row-gap: 10px;
-    img {
+  .order {
+    &__list {
+      display: flex;
+      flex-direction: column;
       margin: 0 auto;
-      width: 50%;
-      border-radius: 20px;
-      box-shadow: 1px 7px 9px #b5b3b3;
+      column-gap: 20px;
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 1px 7px 9px #b5b3b3;
+      }
+    }
+    &__item {
+      margin: 0 auto;
+      padding-bottom: 20px;
     }
   }
+
   .category__list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -199,9 +205,5 @@
     &__filter-item {
       font-size: 10px;
     }
-  }
-  .order__item {
-    margin: 0 auto;
-    width: 100%;
   }
 }
