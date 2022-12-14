@@ -8,7 +8,25 @@ export const productApi = createApi({
     getProducts: build.query<Iproduct[], number>({
       query: (limit = 8) => `products?limit=${limit}`,
     }),
+    getProductsPage: build.query<Iproduct[], string>({
+      query: (name) => `/products?page=${name}&limit=12`,
+    }),
+    getProductsCategory: build.query<Iproduct[], number>({
+      query: (number) => `/products?category=${number}`,
+    }),
+    sortProductsByPrice: build.query<Iproduct[], string>({
+      query: (params) => `/products?sortBy=price&order=${params}`,
+    }),
+    sortProductsByPopular: build.query<Iproduct[], string>({
+      query: (id) => `/products?sortBy=id&order=${id}`,
+    }),
   }),
 });
 
-export const { useGetProductsQuery } = productApi;
+export const {
+  useGetProductsQuery,
+  useGetProductsPageQuery,
+  useGetProductsCategoryQuery,
+  useSortProductsByPriceQuery,
+  useLazySortProductsByPopularQuery,
+} = productApi;

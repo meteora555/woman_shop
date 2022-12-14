@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { CatalogItem, Footer, HeaderCatalog, CatalogFilter } from '../../components';
-import { useGetProductsQuery } from '../../store/product/product.api';
+import { useGetProductsCategoryQuery, useGetProductsQuery } from '../../store/product/product.api';
 
 import { Select } from 'antd';
+import { useTypedSelector } from '../../store';
 
 // Тренировался несколькими способами получать данные, обычный фетч запрос по документации NextJs, с помощью своего апи из папки, и с помощью RTK
 // const BASE_URL = 'https://632346ad362b0d4e7de066f9.mockapi.io/clothes';
@@ -29,8 +30,14 @@ import { Select } from 'antd';
 //   ))}
 
 const Catalog: React.FC = () => {
-  //В конечном варианте, использован хук из Rtk, затем мепим нашу дату,и рендерим компонент CatalogItem, в пропсы передаем весь обьект
-  const { data, isLoading, error } = useGetProductsQuery(32);
+  //В конечном варианте, использован хук из Rtk.
+
+  //из стейта берем определенную категорию
+  const { categoryId } = useTypedSelector((state) => state.filter);
+
+  //После, передаем ее в специальный хук из апи, с определенными квери параметрами, затем мепим полученную нашу дату,и рендерим компонент CatalogItem, в пропсы передаем весь обьект
+
+  const { data, error, isLoading } = useGetProductsCategoryQuery(categoryId);
 
   return (
     <div className="container">
@@ -77,12 +84,13 @@ const Catalog: React.FC = () => {
           </div>
         </div>
         <div className="main__catalog__products">
+          {/* here */}
+
           <CatalogFilter />
           <div className="catalog__block">
             <div className="catalog__items">
-              {data?.map((product: any) => (
-                <CatalogItem key={product.id} product={product} />
-              ))}
+              {data &&
+                data.map((product: any) => <CatalogItem key={product.id} product={product} />)}
             </div>
           </div>
         </div>

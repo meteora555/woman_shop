@@ -1,7 +1,20 @@
 import React, { useState } from 'react';
+
 import { MenuUnfoldOutlined, CloseSquareFilled } from '@ant-design/icons';
-import { Select, Drawer, Space } from 'antd';
+import { Drawer, Space } from 'antd';
 import type { DrawerProps } from 'antd';
+import { useActions } from '../../hooks/useActions';
+
+const categoryList = [
+  'Джинсы',
+  'Футболки',
+  'Блузы',
+  'Юбки',
+  'Свитшоты',
+  'Топы и майки',
+  'Платья',
+  'Брюки',
+];
 
 const CatalogFilter: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -13,35 +26,31 @@ const CatalogFilter: React.FC = () => {
     setOpen(false);
   };
 
+  const { setCategoryId } = useActions();
+
+  const [category, setCategory] = useState(1);
+
+  const onChangeCategory = (i: any) => {
+    setCategory(i);
+    setCategoryId(i);
+  };
+
   return (
     <>
       <div className="catalog__filter">
         <h2>Категории</h2>
         <ul className="catalog__filter-list">
-          <li className="catalog__filter-item">
-            <button className="catalog__btn catalog__btn-active">Джинсы</button>
-          </li>
-          <li className="catalog__filter-item">
-            <button className="catalog__btn">Футболки</button>
-          </li>
-          <li className="catalog__filter-item">
-            <button className="catalog__btn">Блузы</button>
-          </li>
-          <li className="catalog__filter-item">
-            <button className="catalog__btn">Юбки</button>
-          </li>
-          <li className="catalog__filter-item">
-            <button className="catalog__btn">Свитшоты</button>
-          </li>
-          <li className="catalog__filter-item">
-            <button className="catalog__btn">Топы и майки</button>
-          </li>
-          <li className="catalog__filter-item">
-            <button className="catalog__btn">Платья</button>
-          </li>
-          <li className="catalog__filter-item">
-            <button className="catalog__btn">Брюки</button>
-          </li>
+          {categoryList.map((item, i) => (
+            <li className="catalog__filter-item" key={i}>
+              <button
+                onClick={() => onChangeCategory(i + 1)}
+                className={
+                  category === i + 1 ? 'catalog__btn catalog__btn-active' : ' catalog__btn'
+                }>
+                {item}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="filter__mobile">
@@ -61,30 +70,11 @@ const CatalogFilter: React.FC = () => {
             </Space>
           }>
           <ul className="catalog__filter-list">
-            <li className="catalog__filter-item">
-              <button className="catalog__btn catalog__btn-active">Джинсы</button>
-            </li>
-            <li className="catalog__filter-item">
-              <button className="catalog__btn">Футболки</button>
-            </li>
-            <li className="catalog__filter-item">
-              <button className="catalog__btn">Блузы</button>
-            </li>
-            <li className="catalog__filter-item">
-              <button className="catalog__btn">Юбки</button>
-            </li>
-            <li className="catalog__filter-item">
-              <button className="catalog__btn">Свитшоты</button>
-            </li>
-            <li className="catalog__filter-item">
-              <button className="catalog__btn">Топы и майки</button>
-            </li>
-            <li className="catalog__filter-item">
-              <button className="catalog__btn">Платья</button>
-            </li>
-            <li className="catalog__filter-item">
-              <button className="catalog__btn">Брюки</button>
-            </li>
+            {categoryList.map((item) => (
+              <li className="catalog__filter-item" key={Number(new Date()) * Math.random()}>
+                <button className="catalog__btn">{item}</button>
+              </li>
+            ))}
           </ul>
         </Drawer>
         <button onClick={showBurger}>

@@ -2,10 +2,15 @@ import { configureStore, ConfigureStoreOptions, getDefaultMiddleware } from '@re
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { productApi } from './product/product.api';
 import { cartReducer } from './Slices/CartSlice';
+import { filterReducer } from './Slices/FilterSlice';
 
 export const createStore = (options?: ConfigureStoreOptions['preloadedState'] | undefined) =>
   configureStore({
-    reducer: { [productApi.reducerPath]: productApi.reducer, cart: cartReducer },
+    reducer: {
+      [productApi.reducerPath]: productApi.reducer,
+      cart: cartReducer,
+      filter: filterReducer,
+    },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productApi.middleware),
   });
 export const store = createStore();
