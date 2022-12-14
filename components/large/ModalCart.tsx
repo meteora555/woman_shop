@@ -5,8 +5,17 @@ import { useTypedSelector } from '../../store';
 
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
+// С помощью хука из ртк, достаем из стейта нужные нам параметры, и отправляем их в разметку, общую стоимость и с помощью легка вычисляем общее количество вещей.
+
+//используем скролбарс, для создания красивого скрола в корзине.
+
 const ModalCart: React.FC = () => {
   const { cart } = useTypedSelector((state) => state);
+  const totalPrice = useTypedSelector((state) => state.cart.totalPrice);
+
+  const currentItems = useTypedSelector((state) => state.cart.items);
+  const totalCount = currentItems.reduce((sum: number, item: any) => sum + item.count, 0);
+
   return (
     <div className="modal__wrapper">
       <div className="modal__content">
@@ -15,7 +24,7 @@ const ModalCart: React.FC = () => {
             <div className="basket__list">
               <div className="basket__items">
                 <Scrollbars autoHide={true}>
-                  {cart.map((product) => (
+                  {cart.items.map((product) => (
                     <BasketItem key={product.id} product={product} />
                   ))}
                 </Scrollbars>
@@ -23,11 +32,11 @@ const ModalCart: React.FC = () => {
               <div className="basket__bottom">
                 <div className="basket__quantity">
                   <div className="basket__quantity-title">КОЛИЧЕСТВО</div>
-                  <div className="basket__quantity-value">10</div>
+                  <div className="basket__quantity-value">{totalCount}</div>
                 </div>
                 <div className="basket__total">
                   <div className="basket__total-title">ИТОГО</div>
-                  <div className="basket__total-value">11 204 ₽</div>
+                  <div className="basket__total-value">{totalPrice} ₽</div>
                 </div>
                 <div className="basket__button">
                   <button>ОФОРМИТЬ ЗАКАЗ</button>

@@ -1,19 +1,25 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTypedSelector } from '../../store';
 import ModalCart from './ModalCart';
 
 import { Badge, Drawer, DrawerProps, Space } from 'antd';
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState<DrawerProps['placement']>('right');
-
   const showCart = () => {
     setOpen(true);
   };
   const onClose = () => {
     setOpen(false);
   };
+
+  // Получем сначала массив с обьектами, где каждый обьект это карточка товара, затем пробегаем по нему редюсом и схлопываем обьекты, причем каждой свойство счетчика сумирует в аргумент
+
+  const currentItems = useTypedSelector((state) => state.cart.items);
+  const totalCount = currentItems.reduce((sum: number, item: any) => sum + item.count, 0);
+
   return (
     <div className="header__catalog">
       <Drawer
@@ -61,7 +67,7 @@ const Header: React.FC = () => {
               alt="favorite-icon"
             />
           </button>
-          <Badge count={4} offset={[1, 10]} size="default">
+          <Badge count={totalCount} offset={[1, 10]} size="default">
             <button onClick={showCart} className="header__buttons-cart">
               <Image src="/content/icons/cart-btn.png" height={25} width={25} alt="cart-icon" />
             </button>

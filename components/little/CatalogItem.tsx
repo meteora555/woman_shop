@@ -11,10 +11,12 @@ import { message, Tooltip } from 'antd';
 //описываем пропсы, в котором целый обьект с опр свойствами, через useAction вызываем экшен на добавление в корзину, и сам стейт корзины, в поля прокидываем данные из пропсов, дополнительно реализуем фичу на кнопки добавить и если добавлено уже в корзине, и больше добавить нельзя
 interface CatalogItemProps {
   product: {
+    id: string;
     imageUrl: string;
     name: string;
     price: string;
-    id?: string;
+    category?: string;
+    count: number;
   };
 }
 
@@ -22,7 +24,7 @@ const CatalogItem: FC<CatalogItemProps> = ({ product }) => {
   const { addItemToCart } = useActions();
 
   const { cart } = useTypedSelector((state: any) => state);
-  const isHaveInCart = cart.some((el: any) => el.id === product.id);
+  const isHaveInCart = cart.items.some((el: any) => el.id === product.id);
   const messagesCart = ['Добавить в корзину', 'Добавлено в корзину'];
 
   const [messageApi, contextHolder] = message.useMessage();

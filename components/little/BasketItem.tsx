@@ -16,16 +16,19 @@ import {
 
 interface ModalCartItemProps {
   product: {
+    id: string;
     imageUrl: string;
     name: string;
     price: string;
-    id?: string;
+    category?: string;
+    count: number;
   };
 }
 
 const BasketItem: FC<ModalCartItemProps> = ({ product }) => {
-  const { removeItemFromCart } = useActions();
-  console.log(product.id);
+  const { addItemToCart, minusItem, removeItem } = useActions();
+  const currentPrice = Number(product.price) * product.count;
+  console.log(product);
 
   return (
     <div className="basket__item">
@@ -47,22 +50,28 @@ const BasketItem: FC<ModalCartItemProps> = ({ product }) => {
         <div className="basket__item-bottom">
           <div className="basket__item-actions">
             <div className="count">
-              <div className="count__minus">
+              <div
+                onClick={() => {
+                  if (product.count > 1) {
+                    minusItem(product.id);
+                  }
+                }}
+                className="count__minus">
                 <MinusSquareFilled style={{ fontSize: '20px' }} />
               </div>
-              <div className="count__value">1</div>
-              <div className="count__plus">
+              <div className="count__value">{product.count}</div>
+              <div onClick={() => addItemToCart(product)} className="count__plus">
                 <PlusSquareFilled style={{ fontSize: '20px' }} />
               </div>
             </div>
-            <div className="basket__item-total">2000₽</div>
+            <div className="basket__item-total">{currentPrice}</div>
           </div>
           <div className="basket__item-btns">
             <div className="basket__item-btns-favorite">
               <HeartFilled style={{ fontSize: '20px' }} />
             </div>
             <div
-              onClick={() => removeItemFromCart({ id: product.id })}
+              // onClick={() => removeItemFromCart({ id: product.id })}
               className="basket__item-btns-delete">
               <CloseSquareFilled style={{ fontSize: '20px' }} />
             </div>

@@ -1,8 +1,12 @@
 export interface Iproduct {
-  id?: string;
+  id: string;
   imageUrl: string;
   name: string;
   price: string;
   category?: string;
-  quantity?: number;
+  count: number;
+}
+export interface CartSliceState {
+  totalPrice: number;
+  items: Iproduct[];
 }
