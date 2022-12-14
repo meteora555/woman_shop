@@ -70,9 +70,15 @@ const CatalogFilter: React.FC = () => {
             </Space>
           }>
           <ul className="catalog__filter-list">
-            {categoryList.map((item) => (
-              <li className="catalog__filter-item" key={Number(new Date()) * Math.random()}>
-                <button className="catalog__btn">{item}</button>
+            {categoryList.map((item, i) => (
+              <li className="catalog__filter-item" key={i}>
+                <button
+                  onClick={() => onChangeCategory(i + 1)}
+                  className={
+                    category === i + 1 ? 'catalog__btn catalog__btn-active' : ' catalog__btn'
+                  }>
+                  {item}
+                </button>
               </li>
             ))}
           </ul>

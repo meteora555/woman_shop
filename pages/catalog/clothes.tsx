@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { CatalogItem, Footer, HeaderCatalog, CatalogFilter } from '../../components';
-import { useGetProductsCategoryQuery, useGetProductsQuery } from '../../store/product/product.api';
+import {
+  useGetProductsCategoryQuery,
+  useSortProductsByPriceQuery,
+} from '../../store/product/product.api';
 
-import { Select } from 'antd';
+import { Select, FloatButton } from 'antd';
 import { useTypedSelector } from '../../store';
 
 // Тренировался несколькими способами получать данные, обычный фетч запрос по документации NextJs, с помощью своего апи из папки, и с помощью RTK
@@ -39,6 +42,13 @@ const Catalog: React.FC = () => {
 
   const { data, error, isLoading } = useGetProductsCategoryQuery(categoryId);
 
+  const { Option } = Select;
+  const [fieldValue, setFieldValue] = useState('Популярные');
+  const {} = useSortProductsByPriceQuery(fieldValue);
+  console.log(fieldValue);
+
+  if (isLoading) return <h1>идет загрузка</h1>;
+
   return (
     <div className="container">
       <HeaderCatalog />
@@ -60,27 +70,13 @@ const Catalog: React.FC = () => {
               style={{ width: 200 }}
               placeholder="Сортировать"
               optionFilterProp="children"
-              filterOption={(input, option) => (option?.label ?? '').includes(input)}
-              filterSort={(optionA, optionB) =>
-                (optionA?.label ?? '')
-                  .toLowerCase()
-                  .localeCompare((optionB?.label ?? '').toLowerCase())
-              }
-              options={[
-                {
-                  value: '1',
-                  label: 'По дешевле',
-                },
-                {
-                  value: '2',
-                  label: 'По дороже',
-                },
-                {
-                  value: '3',
-                  label: 'Популярные',
-                },
-              ]}
-            />
+              onChange={(value) => {
+                setFieldValue(value);
+              }}>
+              {/* <Option value="">Популярные</Option> */}
+              <Option value="asc">По дороже</Option>
+              <Option value="desc">По дешевле</Option>
+            </Select>
           </div>
         </div>
         <div className="main__catalog__products">
@@ -95,7 +91,7 @@ const Catalog: React.FC = () => {
           </div>
         </div>
       </div>
-
+      <FloatButton.BackTop />
       <Footer />
     </div>
   );

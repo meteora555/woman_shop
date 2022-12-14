@@ -66,12 +66,18 @@
     }
   }
   &__items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(8, 1fr);
+    // grid-column-gap: 10px;
+    // grid-row-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
+}
+.catalogItem {
+  margin-bottom: 15px;
+  margin-right: 15px;
 }
 .mobile__btn {
   background: none;
