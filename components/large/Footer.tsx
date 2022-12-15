@@ -19,7 +19,6 @@ const Footer = (): JSX.Element => {
             неповторимого вкуса. Позвольте себе быть красивой каждый день, с удовольствием выходить
             из дома в любую погоду и радоваться своему отражению в зеркале.
           </p>
-          <p className="footer__about-copyright">© Copyright Digital Stores</p>
         </div>
         <div className="footer__menu">
           <ul className="footer__list">

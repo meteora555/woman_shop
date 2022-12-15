@@ -70,26 +70,13 @@ const BasketItem: FC<ModalCartItemProps> = ({ product }) => {
             <div className="basket__item-btns-favorite">
               <HeartFilled style={{ fontSize: '20px' }} />
             </div>
-            <div
-              // onClick={() => removeItemFromCart({ id: product.id })}
-              className="basket__item-btns-delete">
+            <div onClick={() => removeItem(product.id)} className="basket__item-btns-delete">
               <CloseSquareFilled style={{ fontSize: '20px' }} />
             </div>
           </div>
         </div>
       </div>
     </div>
-    // <div className="modalCart__item">
-    //   <Image src={product.imageUrl} height={200} width={150} alt="modalCart-img" />
-    //   <p>{product.name}</p>
-    //   <p>{product.price}₽</p>
-    //   <span>x</span>
-    //   <i>1</i>
-    //   <b>10000₽</b>
-    //   <button onClick={() => removeItemFromCart({ id: product.id })}>
-    //     <Image src="/content/icons/delete.png" height={27} width={27} alt="delete-icon" />
-    //   </button>
-    // </div>
   );
 };
 

@@ -9,49 +9,49 @@ export default function BurgerWindow() {
       <div className="categories">
         <ul>
           <li>
-            <Link href={'/catalog'}>Зима 2022</Link>
+            <Link href={'/catalog/clothes'}>Зима 2022</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Весна 2022</Link>
+            <Link href={'/catalog/clothes'}>Весна 2022</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Осень 2022</Link>
+            <Link href={'/catalog/clothes'}>Осень 2022</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Зима 2021</Link>
+            <Link href={'/catalog/clothes'}>Зима 2021</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Весна 2021</Link>
+            <Link href={'/catalog/clothes'}>Весна 2021</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Осень 2021</Link>
+            <Link href={'/catalog/clothes'}>Осень 2021</Link>
           </li>
         </ul>
         <h2 className="categories__items">Категории</h2>
         <ul>
           <li>
-            <Link href={'/catalog'}>Джинсы</Link>
+            <Link href={'/catalog/clothes'}>Джинсы</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Свитшоты</Link>
+            <Link href={'/catalog/clothes'}>Свитшоты</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Футболки</Link>
+            <Link href={'/catalog/clothes'}>Футболки</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Топы и майки</Link>
+            <Link href={'/catalog/clothes'}>Топы и майки</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Блузы</Link>
+            <Link href={'/catalog/clothes'}>Блузы</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Платья</Link>
+            <Link href={'/catalog/clothes'}>Платья</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Юбки</Link>
+            <Link href={'/catalog/clothes'}>Юбки</Link>
           </li>
           <li>
-            <Link href={'/catalog'}>Брюки</Link>
+            <Link href={'/catalog/clothes'}>Брюки</Link>
           </li>
         </ul>
       </div>

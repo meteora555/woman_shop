@@ -1,12 +1,13 @@
 import React, { useMemo, FC } from 'react';
+import { SkeletonImg } from '../../components';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../store';
 
 import { PlusCircleFilled, CheckOutlined } from '@ant-design/icons';
-import { message, Tooltip } from 'antd';
+import { message, Tooltip, Image } from 'antd';
 
 //описываем пропсы, в котором целый обьект с опр свойствами, через useAction вызываем экшен на добавление в корзину, и сам стейт корзины, в поля прокидываем данные из пропсов, дополнительно реализуем фичу на кнопки добавить и если добавлено уже в корзине, и больше добавить нельзя
 interface CatalogItemProps {
@@ -18,9 +19,10 @@ interface CatalogItemProps {
     category?: string;
     count: number;
   };
+  loading: boolean;
 }
 
-const CatalogItem: FC<CatalogItemProps> = ({ product }) => {
+const CatalogItem: FC<CatalogItemProps> = ({ product }, loading) => {
   const { addItemToCart } = useActions();
 
   const { cart } = useTypedSelector((state: any) => state);
@@ -46,10 +48,18 @@ const CatalogItem: FC<CatalogItemProps> = ({ product }) => {
     <>
       {contextHolder}
       <div className="catalogItem">
-        <Image src={product.imageUrl} height={330} width={350} alt="catalog-img" />
+        {!loading ? (
+          <SkeletonImg />
+        ) : (
+          <Image width={240} src={product.imageUrl} alt={`${product.name} + 'img'`} />
+        )}
+
+        {/* <Image width={240} src={product.imageUrl} alt={`${product.name} + 'img'`} /> */}
+        {/* <Image src={product.imageUrl} height={330} width={350} alt="catalog-img" /> */}
         <div className="catalogItem__title">
           <h5>{product.name}</h5>
         </div>
+
         <p className="catalogItem-text">80% Полиэстер 20% Вискоза</p>
         <span>
           <p className="catalogItem-price">{product.price} ₽</p>

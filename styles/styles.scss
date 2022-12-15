@@ -369,4 +369,15 @@
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
 }
+.ant-pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.ant-spin {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20%;
+  padding-top: 10%;
+}
 @import './media.scss';

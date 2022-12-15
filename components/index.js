@@ -11,6 +11,7 @@ import BurgerWindow from './large/BurgerWindow';
 import OrderList from './little/OrderList';
 import CategoriesList from './little/CategoriesList';
 import CatalogFilter from './little/CatalogFilter';
+import SkeletonImg from './little/SkeletonImg';
 
 export {
   Header,
@@ -25,4 +26,5 @@ export {
   OrderList,
   CategoriesList,
   CatalogFilter,
+  SkeletonImg,
 };

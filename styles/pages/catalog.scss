@@ -237,13 +237,6 @@
       font-size: 18px;
     }
   }
-  .catalog__items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-  }
 }
 
 @media screen and (max-width: 1135px) {
@@ -259,6 +252,22 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+  }
+  .section-title-block {
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .footer__about {
+    &-title {
+      font-size: 14px;
+    }
+    &-text {
+      font-size: 10px;
+    }
   }
 }
 
@@ -278,5 +287,21 @@
   }
   .catalog__filter {
     display: none;
+  }
+  .section-title-block {
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 8px;
+    }
+  }
+  .footer__about {
+    &-title {
+      font-size: 12px;
+    }
+    &-text {
+      font-size: 4px;
+    }
   }
 }
