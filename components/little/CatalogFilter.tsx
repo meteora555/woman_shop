@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { MenuUnfoldOutlined, CloseSquareFilled } from '@ant-design/icons';
 import { Drawer, Space } from 'antd';
 import type { DrawerProps } from 'antd';
+
 import { useActions } from '../../hooks/useActions';
 
 const categoryList = [
@@ -18,16 +19,14 @@ const categoryList = [
 
 const CatalogFilter: React.FC = () => {
   const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState<DrawerProps['placement']>('left');
+  const [placement] = useState<DrawerProps['placement']>('left');
   const showBurger = () => {
     setOpen(true);
   };
   const onClose = () => {
     setOpen(false);
   };
-
   const { setCategoryId } = useActions();
-
   const [category, setCategory] = useState(1);
 
   const onChangeCategory = (i: any) => {

@@ -3,3 +3,5 @@ const accessories: React.FC = () => {
 };
 
 export default accessories;
+
+// В дальнейшем можно расширить каталог и добавить аксессуары

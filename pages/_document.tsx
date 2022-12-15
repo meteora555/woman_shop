@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
+// Возникли проблемы с использованием antd и react 18  по документации рекомендавали след настройки, внизу в комментарии код как был изначально
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const originalRenderPage = ctx.renderPage;

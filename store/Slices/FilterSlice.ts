@@ -1,5 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+// Создаем слайс, для фильрации и сортировки элементов, стандартные экшены которые принимают один параметр и записывают в стейт
+
 const initialState = {
   categoryId: 1,
   currentPage: 1,

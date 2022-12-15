@@ -8,6 +8,8 @@ import { CSSTransition } from 'react-transition-group';
 export default function Home() {
   const [show, setShow] = useState(false);
 
+  // В качестве тригера поставил в итоге движение мыши, скрол некорректно работает на мобилках
+
   React.useEffect(() => {
     document.body.addEventListener('mousemove', () => {
       setTimeout(() => {
@@ -15,6 +17,7 @@ export default function Home() {
       }, 2000);
     });
   }, []);
+
   return (
     <div className="wrapper">
       <CSSTransition in={show} classNames="header" timeout={500} unmountOnExit>

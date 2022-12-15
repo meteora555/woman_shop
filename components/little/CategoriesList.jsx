@@ -54,12 +54,6 @@ const CategoriesList = () => {
           </Link>
         </div>
       </div>
-      {/* <Image src="/content/order/col2022.jpg" height={510} width={375} alt="Cat - 1" />
-      <Image src="/content/order/category_3.jpg" height={510} width={375} alt="Cat - 2" />
-      <Image src="/content/order/category_5.jpg" height={510} width={375} alt="Cat - 3" />
-      <Image src="/content/order/category_4.jpg" height={510} width={375} alt="Cat - 4" />
-      <Image src="/content/order/category_2.jpg" height={510} width={375} alt="Cat - 5" />
-      <Image src="/content/order/category_6.jpg" height={510} width={375} alt="Cat - 6" /> */}
     </div>
   );
 };

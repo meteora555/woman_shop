@@ -45,19 +45,6 @@ export const CartSlice = createSlice({
       state.items = [];
       state.totalPrice = 0;
     },
-
-    // removeItemFromCart: (state, action: PayloadAction<{ id: string | undefined }>) => {
-    //   return state.items.filter((el) => el.id !== action.payload.id);
-    // },
-
-    // increment: (state, action: PayloadAction<number>) => {
-    //   state.count
-    // },
-    // decrement: (state, action: PayloadAction<number>) => {
-    //   if (state.count > 1) {
-    //     state.count -= action.payload;
-    //   }
-    // },
   },
 });
 

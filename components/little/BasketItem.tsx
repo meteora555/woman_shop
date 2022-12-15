@@ -1,10 +1,9 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { FC } from 'react';
-
 import { useActions } from '../../hooks/useActions';
-import { useTypedSelector } from '../../store';
+
 import {
   PlusSquareFilled,
   MinusSquareFilled,
@@ -28,7 +27,6 @@ interface ModalCartItemProps {
 const BasketItem: FC<ModalCartItemProps> = ({ product }) => {
   const { addItemToCart, minusItem, removeItem } = useActions();
   const currentPrice = Number(product.price) * product.count;
-  console.log(product);
 
   return (
     <div className="basket__item">

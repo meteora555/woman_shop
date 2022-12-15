@@ -1,3 +1,5 @@
+// Подключаем стили,оборачиваем провайдер подключаем стор
+
 import 'antd/dist/reset.css';
 import '../styles/styles.scss';
 
