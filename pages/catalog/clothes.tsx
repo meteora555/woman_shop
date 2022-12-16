@@ -8,7 +8,7 @@ import {
 } from '../../store/product/product.api';
 import { useTypedSelector } from '../../store';
 
-import { Select, FloatButton, Pagination, Spin, Image } from 'antd';
+import { Select, FloatButton, Pagination, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 
 const Catalog: React.FC = () => {
